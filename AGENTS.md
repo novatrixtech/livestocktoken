@@ -51,13 +51,10 @@ servicing e mercado de capitais em torno dos fluxos de caixa da pecuária.
 
 ## Documento canônico do projeto
 
-A análise atual de negócio e diligência é:
-
-`research/livestock-rwa-vc-analysis-2026-07-16.md`
-
-Leia esse documento antes de alterar a tese do projeto, a estrutura financeira,
-a análise regulatória, a narrativa para investidores ou o desenho de
-rastreabilidade.
+A análise atual de negócio e diligência deve viver em `research/` como arquivo
+canônico sem data no nome. Leia o arquivo canônico vigente antes de alterar a
+tese do projeto, a estrutura financeira, a análise regulatória, a narrativa para
+investidores ou o desenho de rastreabilidade.
 
 O memorando é um documento de pesquisa referente a um momento específico, não
 um parecer jurídico. Verifique fatos sensíveis ao tempo antes de apresentá-los
@@ -347,11 +344,16 @@ Não declare a conclusão sem evidências recentes de verificação.
 ## Convenções de arquivos e documentação
 
 - Use UTF-8 e Markdown para pesquisas e documentação do projeto.
-- Use nomes de arquivos claros, descritivos e em letras minúsculas, com datas no
-  formato `YYYY-MM-DD` quando o documento for um retrato datado.
+- Use nomes de arquivos claros, descritivos e em letras minúsculas.
+- Arquivos dentro de `research/` **não devem conter datas no nome**. Eles devem
+  ser tratados como documentos vivos, sempre atualizados e evoluídos no mesmo
+  arquivo.
+- Nunca duplique documentos de `research/` para criar versões datadas ou
+  concorrentes. Quando houver nova informação, atualize o documento canônico
+  existente.
+- Datas de coleta, publicação, acesso ou atualização devem ficar no conteúdo do
+  documento, próximas às fontes e afirmações relevantes, não no nome do arquivo.
 - Mantenha pesquisas duradouras em `research/`.
-- Prefira atualizar uma análise canônica existente em vez de criar versões
-  concorrentes, salvo quando o usuário solicitar um novo retrato datado.
 - Mantenha os links das fontes próximos às afirmações que sustentam ou em uma
   seção de fontes claramente organizada.
 - Use português brasileiro em toda a comunicação e documentação. Use outro
