@@ -1,368 +1,409 @@
 # AGENTS.md
 
-## Purpose
+## Finalidade
 
-This file is the shared operating contract for every AI agent working in this
-repository, including Codex, Claude, Gemini, and other agentic development or
-research tools.
+Este arquivo é o contrato operacional compartilhado por todos os agentes de IA
+que trabalham neste repositório, incluindo Codex, Claude, Gemini e outras
+ferramentas agênticas de desenvolvimento ou pesquisa.
 
-Read this file before taking action. Do not rely on vendor-specific chat
-history, hidden memory, or unstated assumptions as the only source of project
-context. Important decisions must be reflected in repository files so another
-agent can continue the work.
+Leia este arquivo antes de agir. Não use históricos de conversa específicos de
+um fornecedor, memórias ocultas ou premissas não declaradas como única fonte de
+contexto do projeto. Decisões importantes devem ser registradas nos arquivos do
+repositório para que outro agente possa dar continuidade ao trabalho.
 
-## Instruction scope and precedence
+## Escopo e precedência das instruções
 
-- These instructions apply to the entire repository.
-- A more specific `AGENTS.md` in a subdirectory may add or override rules for
-  that subtree.
-- Follow direct user instructions before this file when they conflict.
-- Do not silently reinterpret the business model, legal structure, or target
-  audience.
-- If a tool does not automatically load `AGENTS.md`, explicitly provide this
-  file to that tool as project context.
+- Estas instruções se aplicam a todo o repositório.
+- Um `AGENTS.md` mais específico em um subdiretório pode adicionar ou
+  sobrescrever regras para aquela subárvore.
+- Em caso de conflito, siga as instruções diretas do usuário antes deste
+  arquivo.
+- Não reinterprete silenciosamente o modelo de negócio, a estrutura jurídica ou
+  o público-alvo.
+- Se uma ferramenta não carregar o `AGENTS.md` automaticamente, forneça
+  explicitamente este arquivo à ferramenta como contexto do projeto.
+- Toda comunicação entre o usuário e os agentes, bem como entre agentes, deve
+  ser feita em português brasileiro (PT-BR), salvo instrução direta do usuário
+  em contrário.
 
-## Project overview
+## Visão geral do projeto
 
-**Project:** Livestock Rent
+**Projeto:** Livestock Rent
 
-**Current market:** Brazil, initially focused on Santa Catarina and Rio Grande
-do Sul.
+**Mercado atual:** Brasil, com foco inicial em Santa Catarina e Rio Grande do
+Sul.
 
-**Potential future market:** United States, subject to a separate legal,
-regulatory, tax, and distribution analysis.
+**Mercado futuro potencial:** Estados Unidos, sujeito a uma análise jurídica,
+regulatória, tributária e de distribuição separada.
 
-**Target audience:** Web3 venture capital firms, angel investors, strategic
-agribusiness partners, securitization participants, and other sophisticated
-investors.
+**Público-alvo:** fundos de venture capital Web3, investidores-anjo, parceiros
+estratégicos do agronegócio, participantes de securitização e outros
+investidores sofisticados.
 
-**Core proposition:** Build a regulated livestock asset-management, servicing,
-and data platform that gives investors hands-off exposure to professionally
-managed beef and dairy cattle operations.
+**Proposta central:** construir uma plataforma regulada de gestão de ativos
+pecuários, servicing e dados que ofereça aos investidores exposição sem
+envolvimento operacional direto a operações profissionais de pecuária de corte
+e leite.
 
-The preferred framing is **not** “a token backed by cows.” The investable
-business is the operating, compliance, traceability, servicing, and
-capital-markets infrastructure around livestock cash flows.
+O enquadramento preferencial **não** é “um token lastreado em vacas”. O negócio
+investível é a infraestrutura operacional, de conformidade, rastreabilidade,
+servicing e mercado de capitais em torno dos fluxos de caixa da pecuária.
 
-## Canonical project document
+## Documento canônico do projeto
 
-The current business and diligence analysis is:
+A análise atual de negócio e diligência é:
 
 `research/livestock-rwa-vc-analysis-2026-07-16.md`
 
-Read that document before changing the project thesis, financial structure,
-regulatory analysis, investor narrative, or traceability design.
+Leia esse documento antes de alterar a tese do projeto, a estrutura financeira,
+a análise regulatória, a narrativa para investidores ou o desenho de
+rastreabilidade.
 
-The memo is a point-in-time research document, not a legal opinion. Verify
-time-sensitive facts before presenting them as current.
+O memorando é um documento de pesquisa referente a um momento específico, não
+um parecer jurídico. Verifique fatos sensíveis ao tempo antes de apresentá-los
+como atuais.
 
-## Canonical business architecture
+## Arquitetura canônica do negócio
 
-Preserve the separation between these layers:
+Preserve a separação entre estas camadas:
 
-1. **Livestock operations**
-   - Approved farms manage beef or dairy cattle under properly documented
-     Brazilian operating arrangements.
-   - Beef and dairy are separate economic pools with different cash cycles,
-     risks, and underwriting models.
+1. **Operações pecuárias**
+   - Fazendas aprovadas gerenciam gado de corte ou leite sob arranjos
+     operacionais brasileiros devidamente documentados.
+   - Corte e leite são pools econômicos separados, com diferentes ciclos de
+     caixa, riscos e modelos de análise de crédito.
 
-2. **Animal identity and evidence**
-   - Each admitted animal has one lifecycle NFT connected one-to-one to its
-     official SISBOV identity.
-   - GTA, invoices, veterinary records, physical tags, photographs,
-     geolocation, and recurring independent attestations support the evidence
-     package.
+2. **Identidade e evidências do animal**
+   - Cada animal admitido possui um NFT de ciclo de vida vinculado
+     individualmente à sua identidade oficial no SISBOV.
+   - GTA, notas fiscais, registros veterinários, brincos físicos, fotografias,
+     geolocalização e atestações independentes recorrentes sustentam o pacote de
+     evidências.
 
-3. **Agricultural receivables**
-   - Eligible livestock obligations are represented by CPRs.
-   - CPRs are registered at B3 and reconciled with the underlying operations,
-     animals, documents, and controlled accounts.
+3. **Recebíveis do agronegócio**
+   - Obrigações pecuárias elegíveis são representadas por CPRs.
+   - As CPRs são registradas na B3 e reconciliadas com as operações, os animais,
+     os documentos e as contas controladas subjacentes.
 
-4. **Securitization**
-   - Eligible CPRs may be assigned to a securitization estate and used as
-     backing for a CRA, subject to current Brazilian law and professional
-     advice.
+4. **Securitização**
+   - CPRs elegíveis podem ser cedidas a um patrimônio de securitização e
+     utilizadas como lastro de um CRA, sujeito à legislação brasileira vigente
+     e à orientação profissional.
 
-5. **Investor and settlement layer**
-   - Any investor token must represent or mirror enforceable financial rights;
-     it must not replace the CRA, B3 records, contracts, or investor registry.
-   - The intended distribution cadence is every four months and must be based
-     on realized cash available under the CRA waterfall.
-   - USDC is a settlement rail, not the legal source of the investor's rights
-     and not protection against BRL/USD currency risk.
+5. **Camada do investidor e de liquidação**
+   - Qualquer token do investidor deve representar ou espelhar direitos
+     financeiros exigíveis; ele não deve substituir o CRA, os registros da B3,
+     os contratos nem o cadastro de investidores.
+   - A periodicidade de distribuição pretendida é quadrimestral e deve se
+     basear no caixa realizado disponível conforme a cascata de pagamentos
+     (waterfall) do CRA.
+   - USDC é um meio de liquidação, não a fonte jurídica dos direitos do
+     investidor nem uma proteção contra o risco cambial BRL/USD.
 
-## Brazilian terminology
+## Terminologia brasileira
 
-Use Brazilian terms accurately. Define them on first use for international
-audiences.
+Use os termos brasileiros com precisão. Defina-os no primeiro uso para públicos
+internacionais.
 
-- **B3:** Brazil's principal financial-market infrastructure and exchange,
-  where relevant CPR and CRA records may be registered or deposited.
-- **CPR — Cédula de Produto Rural:** a Brazilian agricultural credit
-  instrument representing an eligible rural product or financial obligation.
-- **CRA — Certificado de Recebíveis do Agronegócio:** a Brazilian
-  agribusiness-receivables security issued through a securitization structure.
-- **SISBOV:** Brazil's official system for individual identification and
-  traceability of bovine and buffalo animals.
-- **GTA — Guia de Trânsito Animal:** the official animal-movement document.
-- **CVM:** Brazil's securities regulator.
-- **BCB/BACEN:** the Central Bank of Brazil.
-- **MAPA:** Brazil's Ministry of Agriculture and Livestock.
-- **CPC 29:** the Brazilian accounting standard for biological assets and
-  agricultural produce.
-- **USDC:** a USD-denominated stablecoin used here only as a proposed
-  distribution or settlement rail.
+- **B3:** principal infraestrutura e bolsa do mercado financeiro brasileiro,
+  onde registros relevantes de CPR e CRA podem ser registrados ou depositados.
+- **CPR — Cédula de Produto Rural:** instrumento brasileiro de crédito rural que
+  representa um produto rural ou uma obrigação financeira elegível.
+- **CRA — Certificado de Recebíveis do Agronegócio:** valor mobiliário
+  brasileiro lastreado em recebíveis do agronegócio e emitido por meio de uma
+  estrutura de securitização.
+- **SISBOV:** sistema oficial brasileiro de identificação individual e
+  rastreabilidade de bovinos e bubalinos.
+- **GTA — Guia de Trânsito Animal:** documento oficial de movimentação animal.
+- **CVM:** regulador do mercado de valores mobiliários brasileiro.
+- **BCB/BACEN:** Banco Central do Brasil.
+- **MAPA:** Ministério da Agricultura e Pecuária do Brasil.
+- **CPC 29:** norma contábil brasileira para ativos biológicos e produto
+  agrícola.
+- **USDC:** stablecoin denominada em dólar dos Estados Unidos, usada aqui
+  somente como meio proposto de distribuição ou liquidação.
 
-Do not assume an international reader understands these acronyms.
+Não presuma que um leitor internacional compreenda essas siglas.
 
-## Token separation
+## Separação dos tokens
 
-There are two distinct token concepts. Never merge them in architecture,
-contracts, diagrams, copy, or analysis.
+Existem dois conceitos distintos de token. Nunca os combine na arquitetura, nos
+contratos, nos diagramas, nos textos ou nas análises.
 
-### Animal NFT
+### NFT do animal
 
-- A non-financial, role-restricted digital twin for one animal.
-- Connected one-to-one to the animal's official SISBOV identity.
-- Used for evidence, lifecycle events, reconciliation, and auditability.
-- Does not grant ownership, dividends, redemption, or investment rights.
-- Must not be publicly transferable as a collectible or speculative asset.
+- Um gêmeo digital não financeiro, com acesso restrito por função, para um único
+  animal.
+- Vinculado individualmente à identidade oficial do animal no SISBOV.
+- Usado para evidências, eventos do ciclo de vida, reconciliação e
+  auditabilidade.
+- Não concede direitos de propriedade, dividendos, resgate ou investimento.
+- Não deve ser publicamente transferível como item colecionável ou ativo
+  especulativo.
 
-### Investor token
+### Token do investidor
 
-- A permissioned representation or mirror of regulated financial rights.
-- Subject to securities, custody, investor-eligibility, KYC/AML, transfer, and
-  recordkeeping rules.
-- Must remain reconciled with the legally controlling CRA and investor records.
+- Uma representação permissionada ou um espelho de direitos financeiros
+  regulados.
+- Sujeito às regras de valores mobiliários, custódia, elegibilidade do
+  investidor, KYC/AML, transferência e manutenção de registros.
+- Deve permanecer reconciliado com o CRA juridicamente controlador e com os
+  registros dos investidores.
 
-The project must continue to function legally and operationally if either token,
-its blockchain, a wallet provider, or a smart contract becomes unavailable.
+O projeto deve continuar funcionando jurídica e operacionalmente se qualquer um
+dos tokens, sua blockchain, um provedor de carteira ou um contrato inteligente
+ficar indisponível.
 
-## SISBOV-connected NFT requirements
+## Requisitos do NFT vinculado ao SISBOV
 
-- Mint only after the animal has a validated SISBOV record and the physical tag,
-  invoice, GTA/sanitary documents, and initial independent evidence match.
-- Use an authorized and properly homologated SISBOV certifier or integration
-  participant. Do not claim direct production access without evidence.
-- Enforce one active NFT per unique, non-reusable SISBOV number.
-- Store sensitive records off-chain with controlled access. Put only necessary
-  references and cryptographic hashes on-chain.
-- Prefer a privacy-preserving reference or keyed hash instead of publishing the
-  full SISBOV identifier.
-- Append corrections; do not erase lifecycle history.
-- Reconcile SISBOV status, NFT status, physical tag, farm inventory, invoices,
-  GTA movements, CPR allocation, CRA backing, and accounting.
-- Mark unavailable or delayed integrations as `sync_pending` or `stale`.
-- Exclude missing, disputed, stale, duplicated, SISBOV-mismatched, or otherwise
-  unreconciled animals from eligible CRA backing and distribution calculations.
-- Retire rather than burn the NFT after death, slaughter, final sale, or
-  confirmed loss so the audit trail remains available.
+- Faça a cunhagem somente após o animal possuir um registro SISBOV validado e
+  haver correspondência entre o brinco físico, a nota fiscal, a GTA ou os
+  documentos sanitários e as evidências independentes iniciais.
+- Use uma certificadora ou participante de integração do SISBOV autorizado e
+  devidamente homologado. Não alegue acesso direto ao ambiente de produção sem
+  evidências.
+- Garanta um único NFT ativo por número SISBOV único e não reutilizável.
+- Armazene registros sensíveis fora da blockchain, com acesso controlado.
+  Registre na blockchain apenas as referências e os hashes criptográficos
+  necessários.
+- Prefira uma referência que preserve a privacidade ou um hash com chave em vez
+  de publicar o identificador SISBOV completo.
+- Acrescente correções; não apague o histórico do ciclo de vida.
+- Reconcilie o status no SISBOV, o status do NFT, o brinco físico, o inventário
+  da fazenda, as notas fiscais, as movimentações por GTA, a alocação em CPR, o
+  lastro do CRA e a contabilidade.
+- Marque integrações indisponíveis ou atrasadas como `sync_pending` ou `stale`.
+- Exclua dos cálculos de lastro elegível do CRA e de distribuição os animais
+  ausentes, contestados, desatualizados, duplicados, incompatíveis com o SISBOV
+  ou não reconciliados por qualquer outro motivo.
+- Após morte, abate, venda final ou perda confirmada, aposente o NFT em vez de
+  queimá-lo, para que a trilha de auditoria permaneça disponível.
 
-An NFT improves tamper evidence; it does not independently prove that an animal
-currently exists, is healthy, is unencumbered, or is owned by the project.
+Um NFT melhora a evidência contra adulterações; ele não prova de forma
+independente que um animal existe atualmente, está saudável, está livre de ônus
+ou pertence ao projeto.
 
-## Financial and accounting rules
+## Regras financeiras e contábeis
 
-- Model beef and dairy separately.
-- Use cohort-level unit economics and actual operator evidence.
-- Base investor distributions only on realized, collected cash after operating
-  expenses, taxes, reserves, debt service, fees, and required waterfall items.
-- Do not treat CPC 29 fair-value gains as distributable cash.
-- Model returns in both BRL and USD.
-- Show FX exposure explicitly. USDC settlement does not remove FX risk.
-- Include mortality, disease, theft, feed, acquisition price, sale price,
-  productivity, offtaker, operator, liquidity, and basis risks.
-- Label every forecast, scenario, target return, and illustrative model as such.
-- Never present an illustrative return as historical performance or a
-  guaranteed yield.
+- Modele pecuária de corte e leite separadamente.
+- Use economia unitária no nível da coorte e evidências reais do operador.
+- Baseie as distribuições aos investidores somente no caixa realizado e
+  recebido, após despesas operacionais, tributos, reservas, serviço da dívida,
+  taxas e itens obrigatórios da cascata de pagamentos.
+- Não trate ganhos de valor justo do CPC 29 como caixa distribuível.
+- Modele os retornos tanto em BRL quanto em USD.
+- Mostre explicitamente a exposição cambial. A liquidação em USDC não elimina o
+  risco cambial.
+- Inclua riscos de mortalidade, doença, furto, alimentação, preço de aquisição,
+  preço de venda, produtividade, comprador, operador, liquidez e base.
+- Identifique como tal toda previsão, cenário, retorno-alvo e modelo
+  ilustrativo.
+- Nunca apresente um retorno ilustrativo como desempenho histórico ou
+  rentabilidade garantida.
 
-## Legal, regulatory, and tax guardrails
+## Salvaguardas jurídicas, regulatórias e tributárias
 
-This repository contains business research, not legal, accounting, tax,
-investment, veterinary, or regulatory advice.
+Este repositório contém pesquisa de negócios, não aconselhamento jurídico,
+contábil, tributário, de investimento, veterinário ou regulatório.
 
-Before fundraising or launch, the project requires written advice from
-qualified Brazilian professionals covering at least:
+Antes da captação de recursos ou do lançamento, o projeto exige orientação por
+escrito de profissionais brasileiros qualificados que cubra, no mínimo:
 
-- livestock ownership, custody, farm agreements, collateral, insolvency, and
-  enforceability;
-- CPR eligibility, issuance, registration, assignment, and collateral;
-- CRA eligibility, securitization, fiduciary regime, offering, custody, and
-  investor records;
-- CVM treatment of the offering and any tokenized representation;
-- BCB/BACEN rules for virtual-asset services, payments, foreign exchange, and
-  cross-border USDC settlement;
-- tax treatment for each investor type and jurisdiction;
-- privacy and data protection, including LGPD;
-- future US securities, commodities, tax, sanctions, and money-transmission
-  requirements before any US offering or solicitation.
+- propriedade do gado, custódia, contratos com fazendas, garantias, insolvência
+  e exigibilidade;
+- elegibilidade, emissão, registro, cessão e garantias da CPR;
+- elegibilidade do CRA, securitização, regime fiduciário, oferta, custódia e
+  registros dos investidores;
+- tratamento da oferta e de qualquer representação tokenizada pela CVM;
+- regras do BCB/BACEN para serviços de ativos virtuais, pagamentos, câmbio e
+  liquidação transfronteiriça em USDC;
+- tratamento tributário para cada tipo e jurisdição de investidor;
+- privacidade e proteção de dados, incluindo a LGPD;
+- requisitos futuros dos Estados Unidos sobre valores mobiliários, commodities,
+  tributos, sanções e transmissão de dinheiro antes de qualquer oferta ou
+  solicitação naquele país.
 
-Do not state that:
+Não declare que:
 
-- the NFT proves or guarantees cattle existence;
-- the investor directly owns a cow unless controlling legal documents literally
-  establish that result;
-- B3 registration guarantees payment, title, collateral perfection, animal
-  existence, or absence of fraud;
-- a CRA makes income universally tax-free;
-- CRA payments are “dividends”;
-- USDC removes currency, issuer, custody, smart-contract, or depeg risk;
-- using an RWA or utility-token label avoids securities regulation;
-- returns or four-month distributions are guaranteed;
-- the future US structure can reuse the Brazilian structure without separate
-  analysis.
+- o NFT prova ou garante a existência do gado;
+- o investidor possui diretamente uma vaca, a menos que os documentos jurídicos
+  controladores estabeleçam literalmente esse resultado;
+- o registro na B3 garante pagamento, titularidade, constituição perfeita da
+  garantia, existência do animal ou ausência de fraude;
+- um CRA torna a renda universalmente isenta de impostos;
+- pagamentos de CRA são “dividendos”;
+- USDC elimina riscos cambiais, do emissor, de custódia, de contrato inteligente
+  ou de perda de paridade;
+- o uso da classificação RWA ou token de utilidade evita a regulação de valores
+  mobiliários;
+- retornos ou distribuições quadrimestrais são garantidos;
+- a futura estrutura nos Estados Unidos pode reutilizar a estrutura brasileira
+  sem uma análise separada.
 
-When discussing CRA taxation, identify the investor class, residence, current
-law, withholding rules, and relevant conditions. Use “remuneration”,
-“distribution”, or “payment under the waterfall” rather than “dividend” unless
-the payment is legally a corporate dividend.
+Ao discutir a tributação do CRA, identifique a classe e a residência do
+investidor, a legislação vigente, as regras de retenção e as condições
+relevantes. Use “remuneração”, “distribuição” ou “pagamento conforme a cascata”
+em vez de “dividendo”, salvo quando o pagamento for juridicamente um dividendo
+societário.
 
-## Research standards
+## Padrões de pesquisa
 
-### Source hierarchy
+### Hierarquia de fontes
 
-Prefer primary and authoritative sources:
+Prefira fontes primárias e oficiais:
 
-1. Brazilian statutes, regulations, and official government publications.
-2. CVM, BCB/BACEN, CMN, MAPA, Receita Federal, B3, and official state agencies.
-3. Embrapa, CEPEA, Epagri/Cepa, Emater/RS-Ascar, and recognized academic
-   research.
-4. Official service-provider documentation for technical integrations.
-5. Reputable secondary reporting only when primary material is unavailable.
+1. Leis e regulamentos brasileiros e publicações oficiais do governo.
+2. CVM, BCB/BACEN, CMN, MAPA, Receita Federal, B3 e órgãos estaduais oficiais.
+3. Embrapa, CEPEA, Epagri/Cepa, Emater/RS-Ascar e pesquisas acadêmicas
+   reconhecidas.
+4. Documentação oficial de prestadores de serviço para integrações técnicas.
+5. Fontes secundárias de boa reputação somente quando não houver material
+   primário disponível.
 
-For US topics, prefer SEC, CFTC, FinCEN, IRS, state regulators, statutes, and
-official stablecoin or protocol documentation.
+Para temas dos Estados Unidos, prefira SEC, CFTC, FinCEN, IRS, reguladores
+estaduais, leis e documentação oficial de stablecoins ou protocolos.
 
-### Time-sensitive work
+### Trabalho sensível ao tempo
 
-- Browse and verify regulations, tax rules, market prices, interest rates,
-  product specifications, API behavior, and institutional roles at the time of
-  the task.
-- Record the exact access or publication date when it matters.
-- Link directly to the supporting page or document.
-- Distinguish source facts from agent inference.
-- Do not cite a search-results page as evidence.
-- Do not preserve a broken or unverified URL merely because it appeared in an
-  older memo.
-- Treat the canonical memo's figures and regulatory conclusions as historical
-  until refreshed.
+- Pesquise na web e verifique regulamentos, regras tributárias, preços de
+  mercado, taxas de juros, especificações de produtos, comportamento de APIs e
+  funções institucionais no momento da tarefa.
+- Registre a data exata de acesso ou publicação quando for relevante.
+- Use links diretos para a página ou o documento de suporte.
+- Diferencie fatos obtidos de fontes das inferências do agente.
+- Não cite uma página de resultados de busca como evidência.
+- Não preserve uma URL quebrada ou não verificada apenas porque ela apareceu em
+  um memorando antigo.
+- Trate os números e as conclusões regulatórias do memorando canônico como
+  históricos até que sejam atualizados.
 
-### Quantitative work
+### Trabalho quantitativo
 
-- Show units, currency, period, source date, and formulas.
-- Keep sourced facts separate from assumptions.
-- Use ranges and sensitivities when evidence does not support a precise point
-  estimate.
-- Reconcile totals and call out missing data.
-- Never fabricate farm performance, animal counts, insurance coverage, legal
-  opinions, partners, registrations, or investor commitments.
+- Mostre unidades, moeda, período, data da fonte e fórmulas.
+- Mantenha fatos obtidos de fontes separados das premissas.
+- Use intervalos e análises de sensibilidade quando as evidências não
+  sustentarem uma estimativa pontual precisa.
+- Reconcilie os totais e destaque dados ausentes.
+- Nunca invente desempenho de fazendas, quantidade de animais, cobertura de
+  seguro, pareceres jurídicos, parceiros, registros ou compromissos de
+  investidores.
 
-## Investor communications
+## Comunicação com investidores
 
-- Lead with the regulated asset-management and traceability platform, not token
-  novelty.
-- Explain Brazilian acronyms for international investors.
-- Keep outreach concise and request a low-friction next step, such as permission
-  to send the deck or a short call.
-- Match claims to the project's actual stage. Use “we are structuring” or
-  “designed to” until execution is documented.
-- Do not describe planned partners, regulatory approvals, B3 registrations,
-  SISBOV integrations, insurance, audits, or issuances as completed without
-  evidence in the repository.
-- Avoid “risk-free”, “guaranteed”, “tax-free”, “passive income”, and similar
-  promotional language.
-- For Web3 VCs, emphasize repeatable origination, servicing revenue, data,
-  compliance infrastructure, auditability, and scalable distribution.
+- Comece pela plataforma regulada de gestão de ativos e rastreabilidade, não
+  pela novidade do token.
+- Explique as siglas brasileiras a investidores internacionais.
+- Mantenha o contato inicial conciso e solicite um próximo passo simples, como
+  permissão para enviar o deck ou realizar uma breve chamada.
+- Alinhe as afirmações ao estágio real do projeto. Use “estamos estruturando” ou
+  “desenhado para” até que a execução esteja documentada.
+- Não descreva parceiros planejados, aprovações regulatórias, registros na B3,
+  integrações com o SISBOV, seguros, auditorias ou emissões como concluídos sem
+  evidências no repositório.
+- Evite “sem risco”, “garantido”, “isento de impostos”, “renda passiva” e
+  linguagem promocional semelhante.
+- Para VCs Web3, enfatize originação repetível, receita de servicing, dados,
+  infraestrutura de conformidade, auditabilidade e distribuição escalável.
 
-## Working method for agents
+## Método de trabalho dos agentes
 
-Before substantive work:
+Antes de realizar trabalho substancial:
 
-1. Read this file.
-2. Read the canonical memo and any files directly relevant to the request.
-3. Run `git status --short --branch`.
-4. Inspect existing changes and preserve unrelated user work.
-5. Identify which claims require current web verification.
+1. Leia este arquivo.
+2. Leia o memorando canônico e todos os arquivos diretamente relevantes à
+   solicitação.
+3. Execute `git status --short --branch`.
+4. Inspecione as alterações existentes e preserve o trabalho não relacionado.
+5. Identifique quais afirmações exigem verificação atual na web.
 
-During work:
+Durante o trabalho:
 
-- Make the smallest change that fully satisfies the request.
-- Follow existing structure and terminology.
-- Keep beef and dairy analyses separate unless explicitly comparing them.
-- Do not silently change the legal or economic architecture.
-- Do not overwrite or discard another agent's or the user's changes.
-- Do not create fictitious facts to fill gaps. State the uncertainty or add a
-  clearly labeled TODO when the user requests a persistent placeholder.
-- Use absolute dates instead of ambiguous terms such as “today” when recording
-  research.
-- Keep secrets, credentials, personal data, investor lists, farm coordinates,
-  and non-public animal records out of committed files.
+- Faça a menor alteração que atenda completamente à solicitação.
+- Siga a estrutura e a terminologia existentes.
+- Mantenha as análises de corte e leite separadas, salvo quando a comparação for
+  explicitamente solicitada.
+- Não altere silenciosamente a arquitetura jurídica ou econômica.
+- Não sobrescreva nem descarte alterações de outro agente ou do usuário.
+- Não crie fatos fictícios para preencher lacunas. Declare a incerteza ou
+  adicione um TODO claramente identificado quando o usuário solicitar um
+  marcador persistente.
+- Use datas absolutas em vez de termos ambíguos como “hoje” ao registrar
+  pesquisas.
+- Mantenha segredos, credenciais, dados pessoais, listas de investidores,
+  coordenadas de fazendas e registros não públicos de animais fora dos arquivos
+  versionados.
 
-After work:
+Após o trabalho:
 
-1. Re-read the user's request and verify every requirement.
-2. Review the changed files.
-3. Run checks appropriate to the artifact.
-4. Run `git diff --check` when the repository has a baseline commit.
-5. Report what changed, what was verified, and any remaining assumptions or
-   blockers.
+1. Releia a solicitação do usuário e verifique todos os requisitos.
+2. Revise os arquivos alterados.
+3. Execute as verificações apropriadas ao artefato.
+4. Execute `git diff --check` quando o repositório possuir um commit de base.
+5. Informe o que mudou, o que foi verificado e quaisquer premissas ou bloqueios
+   restantes.
 
-Do not claim completion without fresh verification evidence.
+Não declare a conclusão sem evidências recentes de verificação.
 
-## File and documentation conventions
+## Convenções de arquivos e documentação
 
-- Use UTF-8 and Markdown for research and project documentation.
-- Use clear, descriptive, lowercase filenames with dates in `YYYY-MM-DD` form
-  when a document is a dated snapshot.
-- Keep durable research under `research/`.
-- Prefer updating an existing canonical analysis over creating competing
-  versions unless the user requests a new dated snapshot.
-- Preserve source links close to the claims they support or in a clearly
-  organized source section.
-- Use English for institutional research by default. Use Brazilian Portuguese
-  when requested or when writing for Brazilian stakeholders.
-- Define acronyms on first use in investor-facing documents.
-- Keep code, contracts, data, financial models, and legal drafts in clearly
-  separated directories if those artifact types are added later.
+- Use UTF-8 e Markdown para pesquisas e documentação do projeto.
+- Use nomes de arquivos claros, descritivos e em letras minúsculas, com datas no
+  formato `YYYY-MM-DD` quando o documento for um retrato datado.
+- Mantenha pesquisas duradouras em `research/`.
+- Prefira atualizar uma análise canônica existente em vez de criar versões
+  concorrentes, salvo quando o usuário solicitar um novo retrato datado.
+- Mantenha os links das fontes próximos às afirmações que sustentam ou em uma
+  seção de fontes claramente organizada.
+- Use português brasileiro em toda a comunicação e documentação. Use outro
+  idioma somente quando solicitado ou quando um artefato destinado a um público
+  internacional exigir isso.
+- Defina as siglas no primeiro uso em documentos destinados a investidores.
+- Mantenha código, contratos, dados, modelos financeiros e minutas jurídicas em
+  diretórios claramente separados caso esses tipos de artefato sejam
+  adicionados posteriormente.
 
-## Cross-agent handoff protocol
+## Protocolo de passagem entre agentes
 
-Because agents may not share chat history:
+Como os agentes podem não compartilhar o histórico de conversa:
 
-- Treat repository files as the handoff medium.
-- Record durable business decisions in the canonical memo or a clearly named
-  decision document.
-- Record source URLs and dates for research another agent may need to audit.
-- Leave the worktree in an understandable state.
-- Summarize incomplete work and blockers in the final response; do not hide them
-  only in chat reasoning.
-- Do not add vendor-specific instructions that contradict this file.
-- If vendor entry files such as `CLAUDE.md` or `GEMINI.md` are later added, keep
-  them short and direct those agents to read `AGENTS.md` rather than duplicating
-  the full configuration.
+- Trate os arquivos do repositório como meio de passagem de contexto.
+- Registre decisões duradouras de negócio no memorando canônico ou em um
+  documento de decisão claramente nomeado.
+- Registre URLs e datas das fontes para pesquisas que outro agente possa
+  precisar auditar.
+- Deixe a árvore de trabalho em um estado compreensível.
+- Resuma trabalhos incompletos e bloqueios na resposta final; não os esconda
+  apenas no raciocínio da conversa.
+- Não adicione instruções específicas de fornecedor que contradigam este
+  arquivo.
+- Se arquivos de entrada específicos de fornecedor, como `CLAUDE.md` ou
+  `GEMINI.md`, forem adicionados posteriormente, mantenha-os curtos e oriente
+  esses agentes a ler o `AGENTS.md` em vez de duplicar toda a configuração.
 
-## Git and GitHub rules
+## Regras de Git e GitHub
 
-- The repository uses the `main` branch unless the user specifies another
-  workflow.
-- Inspect status before editing.
-- Do not use destructive commands such as `git reset --hard`, forced checkout,
-  history rewriting, or force-push without explicit user authorization.
-- Do not stage, commit, push, open a pull request, create a release, or modify a
-  remote unless the user asks.
-- Keep commits focused and do not include unrelated changes.
-- Never commit credentials, private keys, access tokens, `.env` files,
-  confidential investor information, or regulated personal/animal data.
-- The GitHub CLI may be available, but authentication does not imply permission
-  to mutate GitHub state.
+- O repositório usa a branch `main`, salvo quando o usuário especificar outro
+  fluxo de trabalho.
+- Inspecione o status antes de editar.
+- Não use comandos destrutivos como `git reset --hard`, checkout forçado,
+  reescrita de histórico ou force-push sem autorização explícita do usuário.
+- Não faça stage, commit, push, abra pull request, crie release ou modifique um
+  remoto, salvo quando o usuário solicitar.
+- Mantenha os commits focados e não inclua alterações não relacionadas.
+- Nunca faça commit de credenciais, chaves privadas, tokens de acesso, arquivos
+  `.env`, informações confidenciais de investidores ou dados pessoais ou de
+  animais sujeitos a regulação.
+- A CLI do GitHub pode estar disponível, mas a autenticação não implica
+  permissão para alterar o estado no GitHub.
 
-## Current repository state
+## Estado atual do repositório
 
-At the time this file was created:
+No momento em que este arquivo foi criado:
 
-- the repository is initialized on `main`;
-- there is no baseline commit yet;
-- the principal artifact is the livestock RWA research memo under `research/`.
+- o repositório está inicializado na branch `main`;
+- ainda não há um commit de base;
+- o principal artefato é o memorando de pesquisa sobre RWA pecuário em
+  `research/`.
 
-This section is informational and may become stale. Always verify current Git
-state rather than relying on it.
+Esta seção é informativa e pode ficar desatualizada. Sempre verifique o estado
+atual do Git em vez de depender dela.
