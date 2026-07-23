@@ -219,6 +219,38 @@ cost, 24/7 settlement, and an audit trail that reconciles to the individual
 animal rather than to a quarterly PDF. **The legal structure is deliberately
 boring so the distribution can be radical.**
 
+### 5. A credible path to an international credit rating
+
+Animal-level transparency is necessary but not sufficient for institutional
+capital in the United States, Europe, Japan, Singapore, and Australia. Most of
+that capital operates under mandates that require a rating from a globally
+recognized agency — and Fitch Ratings is formally recognized in every target
+market: NRSRO with the SEC, ESMA-registered ECAI in the EU, recognized by the
+JFSA in Japan, accepted by the MAS in Singapore, and an APRA-recognized ECAI
+in Australia. A Fitch rating converts "trust our transparency" into "verify
+with the agency your regulator already accepts."
+
+The rating strategy is sequenced with scale, because rating fees are a fixed
+cost that only volume can absorb:
+
+| Phase | Scale | Rating action |
+|---|---|---|
+| Founding pilot (this document) | ~USD 10k CRA participation | **Unrated.** The 120-day cycle produces the rating dossier: asset-level performance data, documented servicing procedures, legal opinions |
+| Pool 2 | R$ 5–20 million | Fitch **national-scale** structured finance rating (`sf(bra)`) — unlocks Fiagros and domestic institutional distribution |
+| Pool 3+ | R$ 50 million+ | Fitch **international-scale** rating alongside the national one — unlocks foreign institutional mandates |
+
+Two facts should be stated plainly. First, Brazil's sovereign rating at Fitch
+is BB (stable) with a BB+ country ceiling, so an international-scale rating on
+a BRL-collections CRA will be high yield, not investment grade — the
+structure's USDC settlement design addresses exactly the transfer-and-
+convertibility risk that drives that ceiling, and mitigants such as offshore
+reserve accounts or pre-funded coupons can be evaluated at Pool 3 scale.
+Second, the pilot's animal-level evidence is not marketing: default,
+mortality, recovery, and cost data reconciled per head is precisely the input
+Fitch's structured finance methodology requires for pulverized collateral
+pools — and it is the input no competing livestock originator currently has.
+The 120-day pilot is, in practice, the first vintage of that dataset.
+
 ## Deployment of the first 10,000 USDC: build the company
 
 The Founding Angel Investment finances the minimum platform needed to
@@ -251,6 +283,9 @@ originate and service the first institutional-grade livestock asset.
 - define investor eligibility, KYC/AML, custody, reporting, and transfer
   rules — including the offering route and registration analysis for any
   non-resident participation;
+- prepare the pool documentation and operating data room to the requirements
+  of a global rating agency's structured finance methodology (Fitch),
+  including stress scenarios for cattle price, feed cost, and mortality;
 - validate the BRL-to-USDC conversion and payment process with authorized
   providers; and
 - prepare the operating data room for future institutional capital.
@@ -301,8 +336,10 @@ The pilot demonstrates, within approximately 120 days, that Livestock Rent can:
 5. control operating cash and supporting documents;
 6. originate and register eligible CPRs at B3;
 7. assign the CPRs to the securitization estate;
-8. reconcile qualifying collections to the CRA waterfall; and
-9. execute the scheduled investor report and payment.
+8. reconcile qualifying collections to the CRA waterfall;
+9. execute the scheduled investor report and payment; and
+10. produce the first vintage of asset-level performance data in the format a
+    global rating agency's structured finance methodology requires.
 
 ## Proposed 120-day execution roadmap
 
@@ -371,7 +408,8 @@ The startup tranche participates in the potential growth of origination and
 structuring fees; recurring livestock servicing and management fees;
 performance participation tied to realized results; traceability and
 collateral-monitoring software; white-label RWA infrastructure; proprietary
-livestock-underwriting data; and future regional and international
+livestock-underwriting data — the direct input for future agency ratings and
+an asset no competing originator holds; and future regional and international
 distribution.
 
 ### CRA-backed asset proof
@@ -409,6 +447,10 @@ regulated fixed-income evidence that can reprice the platform.
 - Stablecoin adoption makes global settlement practical, while permissioning
   and regulated partners preserve compliance under Brazil's 2026
   virtual-asset framework.
+- The rating infrastructure for agribusiness receivables is mature and
+  battle-tested: Fitch acted on 191 CRA series in a single review in June
+  2026. What the market lacks is an originator producing pulverized,
+  asset-level performance data worth rating — the gap this platform fills.
 - The team that builds the verified operating dataset first becomes the
   trusted originator and servicer for an entire category of livestock RWAs.
 
@@ -457,6 +499,13 @@ No completed CRA issuance, B3 registration, tax treatment, partner engagement,
 or regulatory approval is represented as existing unless independently
 documented.
 
+No credit rating exists today, and no rating agency has been engaged. All
+references to Fitch Ratings describe an intended trajectory, not a current or
+implied rating. Any future international-scale rating would be constrained by
+Brazil's sovereign rating and country ceiling (currently BB / BB+ at Fitch);
+a sovereign downgrade would pressure the CRA rating regardless of the
+underlying livestock performance.
+
 ## Project references
 
 1. [Livestock Rent RWA business and investment
@@ -467,4 +516,8 @@ documented.
    Rent](vbp-agropecuaria-2026-analysis-2026-07-20.md)
 4. [Mapa — 2026 VBP estimated at R$ 1.4
    trillion](https://www.gov.br/agricultura/pt-br/assuntos/noticias/em-junho-valor-bruto-da-producao-agropecuaria-e-estimado-em-r-1-4-trilhao)
-5. [Project overview](../README.md)
+5. [Fitch Ratings and the Brazilian CRA market — research
+   note](fitch-cra-brasil.md)
+6. [Fitch rating trajectory analysis for Livestock Rent
+   CRAs](livestock-rent-fitch-rating-analysis-2026-07-22.md)
+7. [Project overview](../README.md)
