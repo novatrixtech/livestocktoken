@@ -221,11 +221,41 @@ body {
   letter-spacing: -.06em;
 }
 
-@media (max-width: 640px) {
-  .data-row { align-items: flex-start; flex-direction: column; }
-  .data-row strong { max-width: 100%; text-align: left; }
+@media (max-width: 768px) {
+  .data-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .55rem;
+    padding: 1rem;
+  }
+  .data-row span {
+    display: block;
+    width: 100%;
+    line-height: 1.35;
+  }
+  .data-row strong {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+    line-height: 1.45;
+  }
   .light-card, .timeline-card { min-height: auto; }
   .light-card .card-index, .timeline-card h3 { margin-top: 2rem; }
+}
+
+@media (max-width: 520px) {
+  .data-row {
+    border-radius: .9rem;
+    gap: .7rem;
+  }
+  .data-row span {
+    font-size: .78rem;
+    letter-spacing: .02em;
+  }
+  .data-row strong {
+    font-size: .95rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
