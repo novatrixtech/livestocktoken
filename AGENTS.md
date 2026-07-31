@@ -2,246 +2,164 @@
 
 ## Finalidade
 
-Este arquivo é o contrato operacional compartilhado por todos os agentes de IA
-que trabalham neste repositório, incluindo Codex, Claude, Gemini e outras
-ferramentas agênticas de desenvolvimento ou pesquisa.
+Este arquivo é o contrato operacional compartilhado por todos os agentes de IA que trabalham neste repositório, incluindo Codex, Claude, Gemini e
+outras ferramentas agênticas de desenvolvimento ou pesquisa.
 
-Leia este arquivo antes de agir. Não use históricos de conversa específicos de
-um fornecedor, memórias ocultas ou premissas não declaradas como única fonte de
-contexto do projeto. Decisões importantes devem ser registradas nos arquivos do
-repositório para que outro agente possa dar continuidade ao trabalho.
+Leia este arquivo antes de agir. Não use históricos de conversa específicos de um fornecedor, memórias ocultas ou premissas não declaradas como única
+fonte de contexto do projeto. Decisões importantes devem ser registradas nos arquivos do repositório para que outro agente possa dar continuidade ao
+trabalho.
 
 ## Escopo e precedência das instruções
 
 - Estas instruções se aplicam a todo o repositório.
-- Um `AGENTS.md` mais específico em um subdiretório pode adicionar ou
-  sobrescrever regras para aquela subárvore.
-- Em caso de conflito, siga as instruções diretas do usuário antes deste
-  arquivo.
-- Não reinterprete silenciosamente o modelo de negócio, a estrutura jurídica ou
-  o público-alvo.
-- Se uma ferramenta não carregar o `AGENTS.md` automaticamente, forneça
-  explicitamente este arquivo à ferramenta como contexto do projeto.
-- Toda comunicação entre o usuário e os agentes, bem como entre agentes, deve
-  ser feita em português brasileiro (PT-BR), salvo instrução direta do usuário
-  em contrário.
+- Um `AGENTS.md` mais específico em um subdiretório pode adicionar ou sobrescrever regras para aquela subárvore.
+- Em caso de conflito, siga as instruções diretas do usuário antes deste arquivo.
+- Não reinterprete silenciosamente o modelo de negócio, a estrutura jurídica ou o público-alvo.
+- Se uma ferramenta não carregar o `AGENTS.md` automaticamente, forneça explicitamente este arquivo à ferramenta como contexto do projeto.
+- Toda comunicação entre o usuário e os agentes, bem como entre agentes, deve ser feita em português brasileiro (PT-BR), salvo instrução direta do
+  usuário em contrário.
 
-## Visão geral do projeto
+## Posicionamento de marca
 
-**Projeto:** Livestock Rent
+**Projeto:** LivestockTokens.Farm
 
-**Mercado atual:** Brasil, com foco inicial em Santa Catarina e Rio Grande do
-Sul.
+**Categoria:** marketplace de compra, venda e manutenção de ativos e serviços rurais.
 
-**Mercado futuro potencial:** Estados Unidos, sujeito a uma análise jurídica,
-regulatória, tributária e de distribuição separada.
+**Ideia central:** permitir que pessoas em cidades, em qualquer lugar do mundo, possam se tornar produtoras rurais por meio da compra de ativos rurais
+e da contratação de serviços para manter esses ativos.
 
-**Público-alvo:** fundos de venture capital Web3, investidores-anjo, parceiros
-estratégicos do agronegócio, participantes de securitização e outros
-investidores sofisticados.
+**O que somos:** uma plataforma que conecta clientes-produtores a prestadores de serviços rurais.
 
-**Proposta central:** construir uma plataforma regulada de gestão de ativos
-pecuários, servicing e dados que ofereça aos investidores exposição sem
-envolvimento operacional direto a operações profissionais de pecuária de corte
-e leite.
+**O que não somos:** uma promessa de retorno financeiro, uma aplicação de renda passiva, um produto especulativo ou uma forma de vender “lucro fácil”
+com tokenização.
 
-O enquadramento preferencial **não** é “um token lastreado em vacas”. O negócio
-investível é a infraestrutura operacional, de conformidade, rastreabilidade,
-servicing e mercado de capitais em torno dos fluxos de caixa da pecuária.
+**Clientes:** pessoas físicas que querem participar do campo de forma simples, comprando ativos rurais e contratando serviços de operação, manejo,
+armazenagem ou suporte.
 
-## Documento canônico do projeto
+**Prestadores de serviços:** cooperativas no negócio de grãos e tutores de vacas no negócio de gado de leite.
 
+## Público e linguagem
+
+Todos os textos do projeto devem ser escritos para uma mulher de 35 anos, mãe, moradora de cidade, que não é especialista em mercado financeiro,
+tokenização ou agronegócio.
+
+Escreva como se estivesse explicando o projeto para alguém inteligente, ocupada e cuidadosa com o próprio dinheiro, mas que não conhece os termos
+técnicos do setor.
 A análise atual de negócio e diligência deve viver em `research/` como arquivo
 canônico sem data no nome. Leia o arquivo canônico vigente antes de alterar a
 tese do projeto, a estrutura financeira, a análise regulatória, a narrativa para
 investidores ou o desenho de rastreabilidade.
 
-O memorando é um documento de pesquisa referente a um momento específico, não
-um parecer jurídico. Verifique fatos sensíveis ao tempo antes de apresentá-los
-como atuais.
+Regras de linguagem:
+
+- Use português brasileiro claro, direto e acolhedor.
+- Explique termos técnicos no primeiro uso, com exemplos simples.
+- Prefira frases curtas e concretas.
+- Evite jargões de mercado financeiro, Web3 e agronegócio quando uma palavra comum resolver.
+- Não use tom de promessa, urgência, pressão de compra ou enriquecimento.
+- Não use termos como “renda passiva”, “retorno garantido”, “sem risco”, “alto rendimento” ou “lucro certo”.
+- Não trate a pessoa como especuladora; trate como cliente que está virando produtora rural com apoio de prestadores de serviço.
+- Mostre que existem custos, riscos operacionais, prazos, variação de preço e responsabilidade na escolha dos ativos e serviços.
+- Explique que a tecnologia ajuda na organização, rastreabilidade e registro, mas não é o produto principal.
 
 ## Arquitetura canônica do negócio
 
 Preserve a separação entre estas camadas:
 
-1. **Operações pecuárias**
-   - Fazendas aprovadas gerenciam gado de corte ou leite sob arranjos
-     operacionais brasileiros devidamente documentados.
-   - Corte e leite são pools econômicos separados, com diferentes ciclos de
-     caixa, riscos e modelos de análise de crédito.
+### Marketplace
 
-2. **Identidade e evidências do animal**
-   - Cada animal admitido possui um NFT de ciclo de vida vinculado
-     individualmente à sua identidade oficial no SISBOV.
-   - GTA, notas fiscais, registros veterinários, brincos físicos, fotografias,
-     geolocalização e atestações independentes recorrentes sustentam o pacote de
-     evidências.
+A plataforma organiza a relação entre clientes-produtores e prestadores de serviços rurais.
 
-3. **Recebíveis do agronegócio**
-   - Obrigações pecuárias elegíveis são representadas por CPRs.
-   - As CPRs são registradas na B3 e reconciliadas com as operações, os animais,
-     os documentos e as contas controladas subjacentes.
+- Clientes-produtores compram ativos rurais disponíveis no marketplace.
+- Clientes-produtores contratam serviços para manter, operar, armazenar ou manejar esses ativos.
+- Prestadores de serviços executam a parte operacional conforme o tipo de ativo.
+- A plataforma deve comunicar taxas, custos, prazos, riscos e responsabilidades de forma simples antes de qualquer contratação.
 
-4. **Securitização**
-   - CPRs elegíveis podem ser cedidas a um patrimônio de securitização e
-     utilizadas como lastro de um CRA, sujeito à legislação brasileira vigente
-     e à orientação profissional.
+### Operações com grãos
 
-5. **Camada do investidor e de liquidação**
-   - Qualquer token do investidor deve representar ou espelhar direitos
-     financeiros exigíveis; ele não deve substituir o CRA, os registros da B3,
-     os contratos nem o cadastro de investidores.
-   - A periodicidade de distribuição pretendida é quadrimestral e deve se
-     basear no caixa realizado disponível conforme a cascata de pagamentos
-     (waterfall) do CRA.
-   - USDC é um meio de liquidação, não a fonte jurídica dos direitos do
-     investidor nem uma proteção contra o risco cambial BRL/USD.
+Cooperativas são os prestadores de serviços do negócio de grãos.
 
-## Terminologia brasileira
+- A cooperativa pode comprar grãos em nome do cliente-produtor.
+- A cooperativa pode armazenar os grãos.
+- A cooperativa pode vender os grãos quando houver ordem ou regra operacional definida.
+- A plataforma pode cobrar taxa pela compra, pela venda e pela armazenagem.
 
-Use os termos brasileiros com precisão. Defina-os no primeiro uso para públicos
-internacionais.
+Os dados de preço do grão podem vir da Agromove ou de outra fonte definida pelo projeto. Quando citar uma fonte de preço, informe de onde veio o dado
+e a data da consulta.
 
-- **B3:** principal infraestrutura e bolsa do mercado financeiro brasileiro,
-  onde registros relevantes de CPR e CRA podem ser registrados ou depositados.
-- **CPR — Cédula de Produto Rural:** instrumento brasileiro de crédito rural que
-  representa um produto rural ou uma obrigação financeira elegível.
-- **CRA — Certificado de Recebíveis do Agronegócio:** valor mobiliário
-  brasileiro lastreado em recebíveis do agronegócio e emitido por meio de uma
-  estrutura de securitização.
-- **SISBOV:** sistema oficial brasileiro de identificação individual e
-  rastreabilidade de bovinos e bubalinos.
-- **GTA — Guia de Trânsito Animal:** documento oficial de movimentação animal.
-- **CVM:** regulador do mercado de valores mobiliários brasileiro.
-- **BCB/BACEN:** Banco Central do Brasil.
-- **MAPA:** Ministério da Agricultura e Pecuária do Brasil.
-- **CPC 29:** norma contábil brasileira para ativos biológicos e produto
-  agrícola.
-- **USDC:** stablecoin denominada em dólar dos Estados Unidos, usada aqui
-  somente como meio proposto de distribuição ou liquidação.
+### Operações com gado de leite
 
-Não presuma que um leitor internacional compreenda essas siglas.
+Tutores de vacas são os prestadores de serviços do negócio de gado de leite.
 
-## Separação dos tokens
+- O cliente-produtor pode comprar uma vaca leiteira ou outro ativo pecuário disponível no marketplace.
+- O tutor de vaca cuida do manejo, alimentação, bem-estar e rotina operacional do animal conforme contrato de serviço.
+- A plataforma deve explicar de forma simples quais tarefas ficam com o tutor, quais custos existem e quais riscos fazem parte da atividade rural.
 
-Existem dois conceitos distintos de token. Nunca os combine na arquitetura, nos
-contratos, nos diagramas, nos textos ou nas análises.
+Identidade e evidências do animal:
 
-### NFT do animal
-
-- Um gêmeo digital não financeiro, com acesso restrito por função, para um único
-  animal.
-- Vinculado individualmente à identidade oficial do animal no SISBOV.
-- Usado para evidências, eventos do ciclo de vida, reconciliação e
-  auditabilidade.
-- Não concede direitos de propriedade, dividendos, resgate ou investimento.
-- Não deve ser publicamente transferível como item colecionável ou ativo
-  especulativo.
-
-### Token do investidor
-
-- Uma representação permissionada ou um espelho de direitos financeiros
-  regulados.
-- Sujeito às regras de valores mobiliários, custódia, elegibilidade do
-  investidor, KYC/AML, transferência e manutenção de registros.
-- Deve permanecer reconciliado com o CRA juridicamente controlador e com os
-  registros dos investidores.
-
-O projeto deve continuar funcionando jurídica e operacionalmente se qualquer um
-dos tokens, sua blockchain, um provedor de carteira ou um contrato inteligente
-ficar indisponível.
-
-## Requisitos do NFT vinculado ao SISBOV
-
-- Faça a cunhagem somente após o animal possuir um registro SISBOV validado e
-  haver correspondência entre o brinco físico, a nota fiscal, a GTA ou os
-  documentos sanitários e as evidências independentes iniciais.
-- Use uma certificadora ou participante de integração do SISBOV autorizado e
-  devidamente homologado. Não alegue acesso direto ao ambiente de produção sem
+- Cada animal admitido pode ter um NFT de ciclo de vida na blockchain Base, vinculado à identidade oficial do animal quando houver registro aplicável.
+- GTA, notas fiscais, registros veterinários, brincos físicos, fotografias, geolocalização e atestações independentes sustentam o pacote de
   evidências.
-- Garanta um único NFT ativo por número SISBOV único e não reutilizável.
-- Armazene registros sensíveis fora da blockchain, com acesso controlado.
-  Registre na blockchain apenas as referências e os hashes criptográficos
-  necessários.
-- Prefira uma referência que preserve a privacidade ou um hash com chave em vez
-  de publicar o identificador SISBOV completo.
-- Acrescente correções; não apague o histórico do ciclo de vida.
-- Reconcilie o status no SISBOV, o status do NFT, o brinco físico, o inventário
-  da fazenda, as notas fiscais, as movimentações por GTA, a alocação em CPR, o
-  lastro do CRA e a contabilidade.
-- Marque integrações indisponíveis ou atrasadas como `sync_pending` ou `stale`.
-- Exclua dos cálculos de lastro elegível do CRA e de distribuição os animais
-  ausentes, contestados, desatualizados, duplicados, incompatíveis com o SISBOV
-  ou não reconciliados por qualquer outro motivo.
-- Após morte, abate, venda final ou perda confirmada, aposente o NFT em vez de
-  queimá-lo, para que a trilha de auditoria permaneça disponível.
+- Registros sensíveis devem ficar fora da blockchain, com acesso controlado. A blockchain deve guardar apenas referências, eventos e hashes
+  necessários para rastreabilidade.
 
-Um NFT melhora a evidência contra adulterações; ele não prova de forma
-independente que um animal existe atualmente, está saudável, está livre de ônus
-ou pertence ao projeto.
+### Tecnologia e tokenização
 
-## Regras financeiras e contábeis
+A tokenização deve ser apresentada como ferramenta de registro, organização, rastreabilidade e transparência.
 
-- Modele pecuária de corte e leite separadamente.
-- Use economia unitária no nível da coorte e evidências reais do operador.
-- Baseie as distribuições aos investidores somente no caixa realizado e
-  recebido, após despesas operacionais, tributos, reservas, serviço da dívida,
-  taxas e itens obrigatórios da cascata de pagamentos.
-- Não trate ganhos de valor justo do CPC 29 como caixa distribuível.
-- Modele os retornos tanto em BRL quanto em USD.
-- Mostre explicitamente a exposição cambial. A liquidação em USDC não elimina o
-  risco cambial.
-- Inclua riscos de mortalidade, doença, furto, alimentação, preço de aquisição,
-  preço de venda, produtividade, comprador, operador, liquidez e base.
-- Identifique como tal toda previsão, cenário, retorno-alvo e modelo
-  ilustrativo.
-- Nunca apresente um retorno ilustrativo como desempenho histórico ou
-  rentabilidade garantida.
+- Não apresente tokenização como fonte de ganho financeiro.
+- Não diga que um token garante valorização, renda, liquidez ou venda futura.
+- Não transforme o NFT do animal em item colecionável ou promessa de lucro.
+- Explique a blockchain como um livro de registros digitais que ajuda a acompanhar eventos do ativo rural.
 
-## Salvaguardas jurídicas, regulatórias e tributárias
+## Terminologia de marca
 
-Este repositório contém pesquisa de negócios, não aconselhamento jurídico,
-contábil, tributário, de investimento, veterinário ou regulatório.
+Use os termos abaixo de forma consistente em textos de marketing, produto, atendimento e documentação pública.
 
-Antes da captação de recursos ou do lançamento, o projeto exige orientação por
-escrito de profissionais brasileiros qualificados que cubra, no mínimo:
+- **Cliente-produtor:** pessoa que compra ativos rurais e contrata serviços para cuidar deles.
+- **Produtor rural urbano:** forma simples de explicar a pessoa que mora na cidade, mas passa a participar de uma atividade rural por meio da
+  plataforma.
+- **Ativo rural:** bem ligado ao campo, como grãos, vaca leiteira ou outro ativo aprovado pelo marketplace.
+- **Prestador de serviço rural:** quem executa o trabalho de campo para o cliente-produtor.
+- **Cooperativa:** prestadora de serviço nas operações com grãos.
+- **Tutor de vaca:** prestador de serviço que cuida do manejo de vacas leiteiras.
+- **Marketplace rural:** ambiente onde clientes-produtores compram ativos rurais e contratam serviços ligados a esses ativos.
+- **NFT do animal:** registro digital usado para organizar evidências e acompanhar eventos do ciclo de vida de uma vaca.
+- **Blockchain Base:** tecnologia usada para registrar referências e eventos digitais. Explique como um livro de registros digitais.
+- **SISBOV:** sistema oficial brasileiro de identificação e rastreabilidade de bovinos e bubalinos. Explique apenas quando for relevante para o texto.
+- **GTA — Guia de Trânsito Animal:** documento oficial usado para movimentação de animais. Explique apenas quando for relevante para o texto.
 
-- propriedade do gado, custódia, contratos com fazendas, garantias, insolvência
-  e exigibilidade;
-- elegibilidade, emissão, registro, cessão e garantias da CPR;
-- elegibilidade do CRA, securitização, regime fiduciário, oferta, custódia e
-  registros dos investidores;
-- tratamento da oferta e de qualquer representação tokenizada pela CVM;
-- regras do BCB/BACEN para serviços de ativos virtuais, pagamentos, câmbio e
-  liquidação transfronteiriça em USDC;
-- tratamento tributário para cada tipo e jurisdição de investidor;
-- privacidade e proteção de dados, incluindo a LGPD;
-- requisitos futuros dos Estados Unidos sobre valores mobiliários, commodities,
-  tributos, sanções e transmissão de dinheiro antes de qualquer oferta ou
-  solicitação naquele país.
+Não presuma que a leitora compreenda siglas. Se a sigla não ajudar a decisão da cliente, prefira explicar a ideia em linguagem comum.
 
-Não declare que:
+## Regras de valor, custos e resultados
 
-- o NFT prova ou garante a existência do gado;
-- o investidor possui diretamente uma vaca, a menos que os documentos jurídicos
-  controladores estabeleçam literalmente esse resultado;
-- o registro na B3 garante pagamento, titularidade, constituição perfeita da
-  garantia, existência do animal ou ausência de fraude;
-- um CRA torna a renda universalmente isenta de impostos;
-- pagamentos de CRA são “dividendos”;
-- USDC elimina riscos cambiais, do emissor, de custódia, de contrato inteligente
-  ou de perda de paridade;
-- o uso da classificação RWA ou token de utilidade evita a regulação de valores
-  mobiliários;
-- retornos ou distribuições quadrimestrais são garantidos;
-- a futura estrutura nos Estados Unidos pode reutilizar a estrutura brasileira
-  sem uma análise separada.
+A marca nunca promete retorno. O projeto deve ser apresentado como marketplace de ativos e serviços rurais.
 
-Ao discutir a tributação do CRA, identifique a classe e a residência do
-investidor, a legislação vigente, as regras de retenção e as condições
-relevantes. Use “remuneração”, “distribuição” ou “pagamento conforme a cascata”
-em vez de “dividendo”, salvo quando o pagamento for juridicamente um dividendo
-societário.
+- Explique que o cliente-produtor compra ativos rurais e contrata serviços para manter esses ativos.
+- Mostre que ativos rurais podem ter variação de preço, custos de manutenção, custos operacionais, perdas, atrasos e riscos naturais do campo.
+- Quando falar de resultado financeiro, deixe claro que ele depende de preço de compra, preço de venda, custos, taxas, produtividade, clima, saúde
+  animal, logística e condições de mercado.
+- Não use linguagem de promessa, garantia ou rendimento previsível.
+- Não diga que a pessoa receberá renda fixa, renda passiva, lucro recorrente ou pagamento garantido.
+- Não apresente simulações como promessa. Sempre chame de exemplo, cenário ou estimativa.
+- Não esconda taxas. Explique de forma simples quando há taxa de compra, venda, armazenagem, manejo, tecnologia ou serviço.
+- Não trate tokenização como motivo para ganhar dinheiro. A tecnologia deve aparecer como apoio para registro, rastreabilidade e organização.
+
+## Cuidados de comunicação
+
+Este repositório orienta marketing, produto e pesquisa de negócio. Ele não é aconselhamento jurídico, contábil, tributário, veterinário ou financeiro.
+
+Antes de publicar materiais para clientes, parceiros ou prestadores de serviços, revise se o texto:
+
+- explica o que a pessoa está comprando;
+- explica qual serviço será contratado;
+- separa claramente ativo rural, serviço rural e tecnologia;
+- mostra custos e riscos em linguagem simples;
+- evita promessas de ganho, garantia, liquidez ou revenda;
+- não cria a impressão de que a blockchain substitui contrato, nota fiscal, documento rural, cadastro ou atendimento humano;
+- não diz que o NFT prova sozinho que o animal existe, está saudável, está livre de problemas ou pertence ao projeto;
+- não diz que a plataforma controla tarefas que são responsabilidade da cooperativa ou do tutor de vaca;
+- usa exemplos realistas e marcados como exemplos.
 
 ## Padrões de pesquisa
 
@@ -250,65 +168,53 @@ societário.
 Prefira fontes primárias e oficiais:
 
 1. Leis e regulamentos brasileiros e publicações oficiais do governo.
-2. CVM, BCB/BACEN, CMN, MAPA, Receita Federal, B3 e órgãos estaduais oficiais.
-3. Embrapa, CEPEA, Epagri/Cepa, Emater/RS-Ascar e pesquisas acadêmicas
-   reconhecidas.
+2. MAPA, Receita Federal, órgãos estaduais oficiais, fontes públicas de preço e bases oficiais relevantes para ativos rurais.
+3. Embrapa, CEPEA, Epagri/Cepa, Emater/RS-Ascar e pesquisas acadêmicas reconhecidas.
 4. Documentação oficial de prestadores de serviço para integrações técnicas.
-5. Fontes secundárias de boa reputação somente quando não houver material
-   primário disponível.
+5. Fontes secundárias de boa reputação somente quando não houver material primário disponível.
 
-Para temas dos Estados Unidos, prefira SEC, CFTC, FinCEN, IRS, reguladores
-estaduais, leis e documentação oficial de stablecoins ou protocolos.
+Para temas dos Estados Unidos, prefira SEC, CFTC, FinCEN, IRS, reguladores estaduais, leis e documentação oficial de stablecoins ou protocolos.
 
 ### Trabalho sensível ao tempo
 
-- Pesquise na web e verifique regulamentos, regras tributárias, preços de
-  mercado, taxas de juros, especificações de produtos, comportamento de APIs e
+- Pesquise na web e verifique regulamentos, regras tributárias, preços de mercado, taxas de juros, especificações de produtos, comportamento de APIs e
   funções institucionais no momento da tarefa.
 - Registre a data exata de acesso ou publicação quando for relevante.
 - Use links diretos para a página ou o documento de suporte.
 - Diferencie fatos obtidos de fontes das inferências do agente.
 - Não cite uma página de resultados de busca como evidência.
-- Não preserve uma URL quebrada ou não verificada apenas porque ela apareceu em
-  um memorando antigo.
-- Trate os números e as conclusões regulatórias do memorando canônico como
-  históricos até que sejam atualizados.
+- Não preserve uma URL quebrada ou não verificada apenas porque ela apareceu em um memorando antigo.
+- Trate números, preços, custos e conclusões antigas como históricos até que sejam atualizados.
 
 ### Trabalho quantitativo
 
 - Mostre unidades, moeda, período, data da fonte e fórmulas.
 - Mantenha fatos obtidos de fontes separados das premissas.
-- Use intervalos e análises de sensibilidade quando as evidências não
-  sustentarem uma estimativa pontual precisa.
+- Use intervalos e análises de sensibilidade quando as evidências não sustentarem uma estimativa pontual precisa.
 - Reconcilie os totais e destaque dados ausentes.
-- Nunca invente desempenho de fazendas, quantidade de animais, cobertura de
-  seguro, pareceres jurídicos, parceiros, registros ou compromissos de
-  investidores.
+- Nunca invente desempenho de fazendas, quantidade de animais, cobertura de seguro, parceiros, registros, vendas ou compromissos de clientes.
 
-## Comunicação com investidores
+## Comunicação de marketing
 
-- Comece pela plataforma regulada de gestão de ativos e rastreabilidade, não
-  pela novidade do token.
-- Explique as siglas brasileiras a investidores internacionais.
-- Mantenha o contato inicial conciso e solicite um próximo passo simples, como
-  permissão para enviar o deck ou realizar uma breve chamada.
-- Alinhe as afirmações ao estágio real do projeto. Use “estamos estruturando” ou
-  “desenhado para” até que a execução esteja documentada.
-- Não descreva parceiros planejados, aprovações regulatórias, registros na B3,
-  integrações com o SISBOV, seguros, auditorias ou emissões como concluídos sem
-  evidências no repositório.
-- Evite “sem risco”, “garantido”, “isento de impostos”, “renda passiva” e
-  linguagem promocional semelhante.
-- Para VCs Web3, enfatize originação repetível, receita de servicing, dados,
-  infraestrutura de conformidade, auditabilidade e distribuição escalável.
+- Comece pela transformação simples: pessoas da cidade podem se tornar produtoras rurais comprando ativos rurais e contratando serviços para
+  mantê-los.
+- Explique primeiro o ativo e o serviço. Fale de tokenização depois, como tecnologia de apoio.
+- Use exemplos próximos da vida da cliente: compra, cuidado, armazenagem, venda, nota, prazo, custo e acompanhamento.
+- Explique grãos e gado de leite separadamente.
+- Para grãos, fale de cooperativas, compra, armazenagem, venda, taxas e preço de mercado.
+- Para gado de leite, fale de vaca, tutor de vaca, manejo, alimentação, bem-estar, custos e acompanhamento.
+- Alinhe as afirmações ao estágio real do projeto. Use “estamos estruturando”, “desenhado para” ou “pretendemos” até que a execução esteja
+  documentada.
+- Não descreva parceiros planejados, aprovações, integrações, seguros, auditorias ou operações como concluídos sem evidências no repositório.
+- Evite qualquer linguagem que pareça promessa de dinheiro fácil.
+- O tom deve ser claro, humano, responsável e acolhedor.
 
 ## Método de trabalho dos agentes
 
 Antes de realizar trabalho substancial:
 
 1. Leia este arquivo.
-2. Leia o memorando canônico e todos os arquivos diretamente relevantes à
-   solicitação.
+2. Leia todos os arquivos diretamente relevantes à solicitação.
 3. Execute `git status --short --branch`.
 4. Inspecione as alterações existentes e preserve o trabalho não relacionado.
 5. Identifique quais afirmações exigem verificação atual na web.
@@ -317,18 +223,14 @@ Durante o trabalho:
 
 - Faça a menor alteração que atenda completamente à solicitação.
 - Siga a estrutura e a terminologia existentes.
-- Mantenha as análises de corte e leite separadas, salvo quando a comparação for
-  explicitamente solicitada.
+- Mantenha as análises de grãos e gado de leite separadas, salvo quando a comparação for explicitamente solicitada.
 - Não altere silenciosamente a arquitetura jurídica ou econômica.
 - Não sobrescreva nem descarte alterações de outro agente ou do usuário.
-- Não crie fatos fictícios para preencher lacunas. Declare a incerteza ou
-  adicione um TODO claramente identificado quando o usuário solicitar um
+- Não crie fatos fictícios para preencher lacunas. Declare a incerteza ou adicione um TODO claramente identificado quando o usuário solicitar um
   marcador persistente.
-- Use datas absolutas em vez de termos ambíguos como “hoje” ao registrar
-  pesquisas.
-- Mantenha segredos, credenciais, dados pessoais, listas de investidores,
-  coordenadas de fazendas e registros não públicos de animais fora dos arquivos
-  versionados.
+- Use datas absolutas em vez de termos ambíguos como “hoje” ao registrar pesquisas.
+- Mantenha segredos, credenciais, dados pessoais, listas de clientes, parceiros, prestadores, coordenadas de fazendas e registros não públicos de
+  animais fora dos arquivos versionados.
 
 Após o trabalho:
 
@@ -336,14 +238,21 @@ Após o trabalho:
 2. Revise os arquivos alterados.
 3. Execute as verificações apropriadas ao artefato.
 4. Execute `git diff --check` quando o repositório possuir um commit de base.
-5. Informe o que mudou, o que foi verificado e quaisquer premissas ou bloqueios
-   restantes.
+5. Informe o que mudou, o que foi verificado e quaisquer premissas ou bloqueios restantes.
 
 Não declare a conclusão sem evidências recentes de verificação.
 
 ## Convenções de arquivos e documentação
 
 - Use UTF-8 e Markdown para pesquisas e documentação do projeto.
+- Use nomes de arquivos claros, descritivos e em letras minúsculas, com datas no formato `YYYY-MM-DD` quando o documento for um retrato datado.
+- Mantenha pesquisas duradouras em `research/`.
+- Prefira atualizar uma análise canônica existente em vez de criar versões concorrentes, salvo quando o usuário solicitar um novo retrato datado.
+- Mantenha os links das fontes próximos às afirmações que sustentam ou em uma seção de fontes claramente organizada.
+- Use português brasileiro em toda a comunicação e documentação. Use outro idioma somente quando solicitado ou quando um artefato destinado a outro
+  país exigir isso. Escreva de forma concisa, como se explicasse a uma mulher de 35 anos, mãe, sem conhecimento técnico de tokenização ou agronegócio.
+- Defina as siglas no primeiro uso em documentos destinados a clientes, parceiros ou prestadores de serviços.
+- Mantenha código, contratos, dados, modelos financeiros e minutas jurídicas em diretórios claramente separados caso esses tipos de artefato sejam
 - Use nomes de arquivos claros, descritivos e em letras minúsculas.
 - Arquivos dentro de `research/` **não devem conter datas no nome**. Eles devem
   ser tratados como documentos vivos, sempre atualizados e evoluídos no mesmo
@@ -369,34 +278,24 @@ Não declare a conclusão sem evidências recentes de verificação.
 Como os agentes podem não compartilhar o histórico de conversa:
 
 - Trate os arquivos do repositório como meio de passagem de contexto.
-- Registre decisões duradouras de negócio no memorando canônico ou em um
-  documento de decisão claramente nomeado.
-- Registre URLs e datas das fontes para pesquisas que outro agente possa
-  precisar auditar.
+- Registre decisões duradouras de negócio em um documento de marca, produto ou decisão claramente nomeado.
+- Registre URLs e datas das fontes para pesquisas que outro agente possa precisar auditar.
 - Deixe a árvore de trabalho em um estado compreensível.
-- Resuma trabalhos incompletos e bloqueios na resposta final; não os esconda
-  apenas no raciocínio da conversa.
-- Não adicione instruções específicas de fornecedor que contradigam este
-  arquivo.
-- Se arquivos de entrada específicos de fornecedor, como `CLAUDE.md` ou
-  `GEMINI.md`, forem adicionados posteriormente, mantenha-os curtos e oriente
+- Resuma trabalhos incompletos e bloqueios na resposta final; não os esconda apenas no raciocínio da conversa.
+- Não adicione instruções específicas de fornecedor que contradigam este arquivo.
+- Se arquivos de entrada específicos de fornecedor, como `CLAUDE.md` ou `GEMINI.md`, forem adicionados posteriormente, mantenha-os curtos e oriente
   esses agentes a ler o `AGENTS.md` em vez de duplicar toda a configuração.
 
 ## Regras de Git e GitHub
 
-- O repositório usa a branch `main`, salvo quando o usuário especificar outro
-  fluxo de trabalho.
+- O repositório usa a branch `main`, salvo quando o usuário especificar outro fluxo de trabalho.
 - Inspecione o status antes de editar.
-- Não use comandos destrutivos como `git reset --hard`, checkout forçado,
-  reescrita de histórico ou force-push sem autorização explícita do usuário.
-- Não faça stage, commit, push, abra pull request, crie release ou modifique um
-  remoto, salvo quando o usuário solicitar.
+- Não use comandos destrutivos como `git reset --hard`, checkout forçado, reescrita de histórico ou force-push sem autorização explícita do usuário.
+- Não faça stage, commit, push, abra pull request, crie release ou modifique um remoto, salvo quando o usuário solicitar.
 - Mantenha os commits focados e não inclua alterações não relacionadas.
-- Nunca faça commit de credenciais, chaves privadas, tokens de acesso, arquivos
-  `.env`, informações confidenciais de investidores ou dados pessoais ou de
-  animais sujeitos a regulação.
-- A CLI do GitHub pode estar disponível, mas a autenticação não implica
-  permissão para alterar o estado no GitHub.
+- Nunca faça commit de credenciais, chaves privadas, tokens de acesso, arquivos `.env`, informações confidenciais de clientes, parceiros, prestadores
+  ou dados pessoais ou de animais sujeitos a regulação.
+- A CLI do GitHub pode estar disponível, mas a autenticação não implica permissão para alterar o estado no GitHub.
 
 ## Estado atual do repositório
 
@@ -404,8 +303,10 @@ No momento em que este arquivo foi criado:
 
 - o repositório está inicializado na branch `main`;
 - ainda não há um commit de base;
-- o principal artefato é o memorando de pesquisa sobre RWA pecuário em
-  `research/`.
+- o principal artefato de orientação dos agentes é este `AGENTS.md`.
 
-Esta seção é informativa e pode ficar desatualizada. Sempre verifique o estado
-atual do Git em vez de depender dela.
+Esta seção é informativa e pode ficar desatualizada. Sempre verifique o estado atual do Git em vez de depender dela.
+
+## Formatação de arquivos
+
+Todas as linhas dos arquivos-fonte podem chegar até 160 colunas.

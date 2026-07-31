@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Imagem social LivestockTokens.Farm">
+  <rect width="1200" height="630" fill="#fbfbf7"/>
+  <rect x="58" y="56" width="1084" height="518" rx="44" fill="#ffffff" stroke="#d7dfd8" stroke-width="2"/>
+  <circle cx="950" cy="314" r="188" fill="#dcecdf"/>
+  <image href="logo-mark.png" x="792" y="156" width="316" height="316" preserveAspectRatio="xMidYMid meet"/>
+  <text x="118" y="154" fill="#12382a" font-family="Outfit, Avenir Next, Arial, sans-serif" font-size="56" font-weight="800">
+    LivestockTokens.Farm
+  </text>
+  <text x="120" y="238" fill="#17251f" font-family="Outfit, Avenir Next, Arial, sans-serif" font-size="40" font-weight="800">
+    Marketplace de ativos rurais
+  </text>
+  <text x="122" y="306" fill="#53635a" font-family="Atkinson Hyperlegible, Arial, sans-serif" font-size="28" font-weight="700">
+    Compre ativos rurais e contrate serviços
+  </text>
+  <text x="122" y="350" fill="#53635a" font-family="Atkinson Hyperlegible, Arial, sans-serif" font-size="28" font-weight="700">
+    para cuidar da operação.
+  </text>
+  <path d="M122 455h338" stroke="#12382a" stroke-width="10" stroke-linecap="round"/>
+  <path d="M122 487h250" stroke="#d8a545" stroke-width="10" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="627" viewBox="0 0 1200 627" role="img" aria-label="Post LinkedIn LivestockTokens.Farm">
+  <rect width="1200" height="627" fill="#fff8e7"/>
+  <rect x="54" y="54" width="1092" height="519" rx="44" fill="#12382a"/>
+  <path d="M54 452c188-118 412-174 673-169 184 4 327 34 419 70v220H54z" fill="#1f6b45"/>
+  <path d="M116 530c144-94 311-150 501-166" fill="none" stroke="#8cc63f" stroke-width="34" stroke-linecap="round"/>
+  <path d="M148 562c132-67 278-107 438-120" fill="none" stroke="#fff6d8" stroke-width="15" stroke-linecap="round" opacity=".88"/>
+  <text x="106" y="152" fill="#fff6d8" font-family="DM Sans, Avenir Next, system-ui, sans-serif" font-size="31" font-weight="800">
+    LivestockTokens.Farm
+  </text>
+  <text x="106" y="246" fill="#fff6d8" font-family="DM Sans, Avenir Next, system-ui, sans-serif" font-size="62" font-weight="900" letter-spacing="-2">
+    O campo também pode
+  </text>
+  <text x="106" y="318" fill="#fff6d8" font-family="DM Sans, Avenir Next, system-ui, sans-serif" font-size="62" font-weight="900" letter-spacing="-2">
+    começar na cidade.
+  </text>
+  <text x="110" y="382" fill="#dce7c8" font-family="DM Sans, Avenir Next, system-ui, sans-serif" font-size="27" font-weight="650">
+    Marketplace para comprar ativos rurais e contratar
+  </text>
+  <text x="110" y="420" fill="#dce7c8" font-family="DM Sans, Avenir Next, system-ui, sans-serif" font-size="27" font-weight="650">
+    serviços de cuidado, armazenagem e operação.
+  </text>
+  <image href="../brand/logo-mark.png" x="870" y="82" width="196" height="196" preserveAspectRatio="xMidYMid meet"/>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080" role="img" aria-label="Avatar LivestockTokens.Farm para LinkedIn">
+  <rect width="1080" height="1080" fill="#12382a"/>
+  <rect x="96" y="96" width="888" height="888" rx="92" fill="#fff8e7"/>
+  <path d="M210 704c125-155 291-235 498-246 46-3 89-1 130 6v280H210z" fill="#8cc63f"/>
+  <path d="M292 775c101-106 222-166 362-184" fill="none" stroke="#12382a" stroke-width="42" stroke-linecap="round"/>
+  <path d="M332 331h116v185H332z" fill="#12382a"/>
+  <path d="M612 517h152L688 407z" fill="#12382a"/>
+  <rect x="642" y="517" width="94" height="100" rx="8" fill="#12382a"/>
+  <circle cx="690" cy="618" r="18" fill="#fff8e7"/>
+  <text x="540" y="884" text-anchor="middle" fill="#12382a" font-family="DM Sans, Avenir Next, system-ui, sans-serif" font-size="86" font-weight="900" letter-spacing="-2">
+    LivestockTokens.Farm
+  </text>
+</svg>

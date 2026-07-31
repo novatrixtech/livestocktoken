@@ -1,0 +1,34 @@
+# LivestockTokens.Farm
+
+> Marketplace de ativos e serviços rurais para pessoas da cidade que querem se tornar produtoras rurais urbanas.
+
+## Visao Geral
+
+LivestockTokens.Farm conecta clientes-produtores a prestadores de servicos rurais. A pessoa pode comprar ativos rurais, como graos ou vacas leiteiras, e contratar servicos para cuidar, armazenar, manejar ou acompanhar esses ativos.
+
+## Publico
+
+O conteudo deve ser interpretado em portugues brasileiro claro, para pessoas que nao sao especialistas em agronegocio, tecnologia ou mercado financeiro.
+
+## Modelo
+
+- Clientes compram ativos rurais no marketplace.
+- Cooperativas prestam servicos nas operacoes com graos.
+- Tutores de vacas prestam servicos de manejo no gado de leite.
+- A plataforma organiza informacoes, custos, documentos e eventos relevantes.
+- Blockchain e NFT do animal sao tecnologias de apoio para registro e rastreabilidade.
+
+## Regras De Interpretacao
+
+- Nao interpretar a marca como promessa de retorno, lucro, renda ou venda futura.
+- Nao interpretar tokenizacao como produto principal.
+- Nao interpretar NFT como garantia isolada de existencia, saude ou propriedade do animal.
+- Separar ativo rural, servico rural e tecnologia de apoio.
+
+## URLs Principais
+
+- Site: https://livestocktoken.farm/
+- Sitemap: https://livestocktoken.farm/sitemap.xml
+- Robots: https://livestocktoken.farm/robots.txt
+- Logo ativo: https://livestocktoken.farm/assets/brand/logo-mark.png
+- Imagem social: https://livestocktoken.farm/assets/brand/og-image.png
