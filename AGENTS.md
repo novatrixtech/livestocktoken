@@ -45,6 +45,10 @@ tokenização ou agronegócio.
 
 Escreva como se estivesse explicando o projeto para alguém inteligente, ocupada e cuidadosa com o próprio dinheiro, mas que não conhece os termos
 técnicos do setor.
+A análise atual de negócio e diligência deve viver em `research/` como arquivo
+canônico sem data no nome. Leia o arquivo canônico vigente antes de alterar a
+tese do projeto, a estrutura financeira, a análise regulatória, a narrativa para
+investidores ou o desenho de rastreabilidade.
 
 Regras de linguagem:
 
@@ -249,6 +253,24 @@ Não declare a conclusão sem evidências recentes de verificação.
   país exigir isso. Escreva de forma concisa, como se explicasse a uma mulher de 35 anos, mãe, sem conhecimento técnico de tokenização ou agronegócio.
 - Defina as siglas no primeiro uso em documentos destinados a clientes, parceiros ou prestadores de serviços.
 - Mantenha código, contratos, dados, modelos financeiros e minutas jurídicas em diretórios claramente separados caso esses tipos de artefato sejam
+- Use nomes de arquivos claros, descritivos e em letras minúsculas.
+- Arquivos dentro de `research/` **não devem conter datas no nome**. Eles devem
+  ser tratados como documentos vivos, sempre atualizados e evoluídos no mesmo
+  arquivo.
+- Nunca duplique documentos de `research/` para criar versões datadas ou
+  concorrentes. Quando houver nova informação, atualize o documento canônico
+  existente.
+- Datas de coleta, publicação, acesso ou atualização devem ficar no conteúdo do
+  documento, próximas às fontes e afirmações relevantes, não no nome do arquivo.
+- Mantenha pesquisas duradouras em `research/`.
+- Mantenha os links das fontes próximos às afirmações que sustentam ou em uma
+  seção de fontes claramente organizada.
+- Use português brasileiro em toda a comunicação e documentação. Use outro
+  idioma somente quando solicitado ou quando um artefato destinado a um público
+  internacional exigir isso.
+- Defina as siglas no primeiro uso em documentos destinados a investidores.
+- Mantenha código, contratos, dados, modelos financeiros e minutas jurídicas em
+  diretórios claramente separados caso esses tipos de artefato sejam
   adicionados posteriormente.
 
 ## Protocolo de passagem entre agentes
