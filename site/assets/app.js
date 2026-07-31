@@ -5,8 +5,9 @@
   if (menuToggle && mobileNav) {
     menuToggle.addEventListener("click", () => {
       const expanded = menuToggle.getAttribute("aria-expanded") === "true";
-      menuToggle.setAttribute("aria-expanded", String(!expanded));
-      mobileNav.hidden = expanded;
+      const nextExpanded = !expanded;
+      menuToggle.setAttribute("aria-expanded", String(nextExpanded));
+      mobileNav.hidden = !nextExpanded;
     });
 
     mobileNav.querySelectorAll("a").forEach((link) => {
