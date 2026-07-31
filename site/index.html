@@ -1,253 +1,302 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Livestock Rent | Special RWA token for real cattle assets</title>
-  <meta name="description" content="Livestock Rent structures a special Real-World Asset token backed by concrete livestock assets, Brazilian legal infrastructure, risk controls and external risk analysis with Fitch." />
-  <meta name="theme-color" content="#07110d" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Livestock Rent | Special RWA token for real cattle assets" />
-  <meta property="og:description" content="A Brazil-first livestock RWA platform combining concrete cattle assets, legal collateral, regulated capital-market rails, and Fitch risk-analysis workstreams." />
-  <meta property="og:url" content="https://livestocktoken.farm/" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300..900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['DM Sans', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
-            mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'monospace']
-          },
-          colors: {
-            ink: '#07110d',
-            pine: '#0d2a1b',
-            field: '#d8ff5f',
-            mint: '#74e6a3',
-            gold: '#f1c86b',
-            clay: '#c67b4a'
-          },
-          boxShadow: {
-            lift: '0 26px 80px rgba(0,0,0,.34)',
-            soft: '0 18px 45px rgba(9,32,21,.18)'
-          }
-        }
-      }
-    }
-  </script>
-  <link rel="stylesheet" href="/assets/site.css" />
-</head>
-<body class="bg-ink text-white antialiased">
-  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-field focus:px-5 focus:py-3 focus:text-ink">Skip to content</a>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      LivestockTokens.Farm | Ativos rurais e serviços para novos produtores
+    </title>
+    <meta
+      name="description"
+      content="Marketplace para pessoas da cidade comprarem ativos rurais e contratarem cooperativas e tutores de vacas para cuidar da operação."
+    />
+    <meta name="theme-color" content="#12382a" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="LivestockTokens.Farm" />
+    <meta
+      property="og:description"
+      content="Ativos rurais e serviços para novos produtores."
+    />
+    <meta property="og:url" content="https://livestocktoken.farm/" />
+    <meta
+      property="og:image"
+      content="https://livestocktoken.farm/assets/images/hero-urban-producer.jpg"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Outfit:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/site.css" />
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Pular para o conteúdo</a>
 
-  <header class="fixed inset-x-0 top-0 z-40 border-b border-white/10 bg-ink/75 backdrop-blur-xl">
-    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8" aria-label="Primary navigation">
-      <a href="#top" class="group flex items-center gap-3" aria-label="Livestock Rent home">
-        <span class="grid h-10 w-10 place-items-center rounded-xl border border-field/30 bg-field text-sm font-black text-ink shadow-[0_0_36px_rgba(216,255,95,.22)]">LR</span>
-        <span>
-          <span class="block text-sm font-semibold tracking-[.18em] text-white uppercase">Livestock Rent</span>
-          <span class="block text-xs text-white/50">Special livestock RWA token</span>
-        </span>
-      </a>
-      <button id="menuToggle" class="rounded-full border border-white/10 px-4 py-2 text-sm text-white/80 md:hidden" type="button" aria-expanded="false" aria-controls="mobileNav">Menu</button>
-      <div class="hidden items-center gap-7 text-sm font-medium text-white/68 md:flex">
-        <a class="hover:text-white" href="#rwa">RWA thesis</a>
-        <a class="hover:text-white" href="#fitch">Fitch</a>
-        <a class="hover:text-white" href="#guarantees">Guarantees</a>
-        <a class="hover:text-white" href="#architecture">Architecture</a>
-        <a class="rounded-full bg-field px-5 py-2.5 font-bold text-ink transition hover:bg-white" href="#contact">Investor brief</a>
+    <header class="site-header">
+      <nav class="nav-shell" aria-label="Navegação principal">
+        <a
+          href="#topo"
+          class="brand-link"
+          aria-label="LivestockTokens.Farm início"
+        >
+          <img src="/assets/brand/favicon.svg" width="44" height="44" alt="" />
+          <span>
+            <strong>LivestockTokens.Farm</strong>
+            <small>Marketplace rural</small>
+          </span>
+        </a>
+        <button
+          id="menuToggle"
+          class="menu-button"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobileNav"
+        >
+          <span></span>
+          <span></span>
+          <span class="sr-only">Abrir menu</span>
+        </button>
+        <div class="nav-links">
+          <a href="#como-funciona">Como funciona</a>
+          <a href="#graos">Grãos</a>
+          <a href="#leite">Gado de leite</a>
+          <a href="#tecnologia">Tecnologia</a>
+          <a class="nav-cta" href="#lista">Entrar na lista</a>
+        </div>
+      </nav>
+      <div id="mobileNav" class="mobile-nav" hidden>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#graos">Grãos</a>
+        <a href="#leite">Gado de leite</a>
+        <a href="#tecnologia">Tecnologia</a>
+        <a href="#lista">Entrar na lista</a>
       </div>
-    </nav>
-    <div id="mobileNav" class="hidden border-t border-white/10 px-5 py-4 md:hidden">
-      <div class="grid gap-3 text-sm text-white/75">
-        <a href="#rwa">RWA thesis</a>
-        <a href="#fitch">Fitch</a>
-        <a href="#guarantees">Guarantees</a>
-        <a href="#architecture">Architecture</a>
-        <a href="#contact">Investor brief</a>
-      </div>
-    </div>
-  </header>
+    </header>
 
-  <main id="main">
-    <section id="top" class="relative isolate min-h-screen overflow-hidden pt-28">
-      <div class="absolute inset-0 -z-10 hero-grid"></div>
-      <div class="absolute left-1/2 top-16 -z-10 h-[640px] w-[880px] -translate-x-1/2 rounded-full bg-field/10 blur-3xl"></div>
-      <div class="mx-auto grid max-w-7xl gap-12 px-5 pb-24 pt-16 lg:grid-cols-[1.04fr_.96fr] lg:items-center lg:px-8 lg:pb-32">
-        <div>
-          <div class="mb-7 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[.04] px-4 py-2 text-sm text-white/70">
-            <span class="h-2 w-2 rounded-full bg-mint shadow-[0_0_18px_rgba(116,230,163,.9)]"></span>
-            Real asset. Legal wrapper. Independent risk discipline.
-          </div>
-          <h1 class="max-w-5xl text-5xl font-semibold leading-[.96] tracking-[-.065em] text-white sm:text-7xl lg:text-[6.5rem]">
-            A special Real-World Asset token anchored in concrete livestock.
-          </h1>
-          <p class="mt-8 max-w-2xl text-lg leading-8 text-white/68 sm:text-xl">
-            Livestock Rent is structuring a Brazil-first livestock RWA platform where the token represents a real financial structure around cattle cash flows, not a synthetic crypto narrative. The model combines tangible livestock assets, Brazilian legal instruments, regulated infrastructure, companies operating the structure, and a Fitch risk-analysis workstream.
+    <main id="main">
+      <section id="topo" class="hero-section">
+        <div class="hero-content">
+          <p class="eyebrow">
+            Para quem mora na cidade e quer participar do campo
           </p>
-          <div class="mt-10 flex flex-col gap-3 sm:flex-row">
-            <a href="#guarantees" class="inline-flex items-center justify-center rounded-full bg-field px-6 py-4 text-sm font-black text-ink transition hover:bg-white">See protection layers</a>
-            <a href="#fitch" class="inline-flex items-center justify-center rounded-full border border-white/12 bg-white/[.03] px-6 py-4 text-sm font-semibold text-white transition hover:border-white/30 hover:bg-white/[.07]">View Fitch layer</a>
+          <h1>O campo na sua rotina.</h1>
+          <p>
+            Compre ativos rurais e contrate cooperativas ou tutores para cuidar
+            da operação.
+          </p>
+          <div class="hero-actions">
+            <a href="#como-funciona" class="button-primary"
+              >Ver como funciona <span>↗</span></a
+            >
+            <a href="#custos" class="button-secondary"
+              >Entender custos e riscos</a
+            >
           </div>
-          <dl class="mt-12 grid max-w-2xl grid-cols-2 gap-3 sm:grid-cols-4">
-            <div class="rounded-2xl border border-white/10 bg-white/[.035] p-4">
-              <dt class="text-xs uppercase tracking-[.18em] text-white/40">Asset</dt>
-              <dd class="mt-2 text-lg font-semibold">Concrete cattle</dd>
+        </div>
+        <figure class="hero-image">
+          <img
+            src="/assets/images/hero-urban-producer.jpg"
+            width="1536"
+            height="864"
+            alt="Mulher em apartamento na cidade acompanhando ativos rurais pelo computador"
+          />
+        </figure>
+        <aside class="hero-panel" aria-label="Resumo do marketplace">
+          <img
+            src="/assets/brand/logo-site.svg"
+            width="720"
+            height="180"
+            alt="LivestockTokens.Farm"
+          />
+          <dl>
+            <div>
+              <dt>Clientes</dt>
+              <dd>pessoas que se tornam clientes-produtoras</dd>
             </div>
-            <div class="rounded-2xl border border-white/10 bg-white/[.035] p-4">
-              <dt class="text-xs uppercase tracking-[.18em] text-white/40">Legal rail</dt>
-              <dd class="mt-2 text-lg font-semibold">CPR / CRA</dd>
+            <div>
+              <dt>Grãos</dt>
+              <dd>serviços feitos por cooperativas</dd>
             </div>
-            <div class="rounded-2xl border border-white/10 bg-white/[.035] p-4">
-              <dt class="text-xs uppercase tracking-[.18em] text-white/40">Risk</dt>
-              <dd class="mt-2 text-lg font-semibold">Fitch review</dd>
-            </div>
-            <div class="rounded-2xl border border-white/10 bg-white/[.035] p-4">
-              <dt class="text-xs uppercase tracking-[.18em] text-white/40">Token</dt>
-              <dd class="mt-2 text-lg font-semibold">Special RWA</dd>
+            <div>
+              <dt>Leite</dt>
+              <dd>manejo feito por tutores de vacas</dd>
             </div>
           </dl>
-        </div>
+        </aside>
+      </section>
 
-        <div class="relative">
-          <div class="absolute -inset-8 -z-10 rounded-[3rem] bg-gradient-to-br from-field/20 via-mint/10 to-transparent blur-2xl"></div>
-          <div class="rounded-[2rem] border border-white/12 bg-[#0b1610]/90 p-4 shadow-lift backdrop-blur">
-            <div class="rounded-[1.5rem] border border-white/10 bg-black/30 p-5">
-              <div class="mb-5 flex items-center justify-between border-b border-white/10 pb-4">
-                <div>
-                  <p class="font-mono text-xs uppercase tracking-[.18em] text-field">RWA control plane</p>
-                  <h2 class="mt-1 text-2xl font-semibold tracking-[-.04em]">Concrete collateral stack</h2>
-                </div>
-                <span class="rounded-full border border-mint/25 bg-mint/10 px-3 py-1 font-mono text-xs text-mint">structuring</span>
-              </div>
-              <div class="space-y-3">
-                <div class="data-row"><span>Physical asset</span><strong>Cattle with identity and evidence</strong></div>
-                <div class="data-row"><span>Legal support</span><strong>Brazilian CPR / CRA architecture</strong></div>
-                <div class="data-row"><span>Risk discipline</span><strong>Fitch analyzing operation risk</strong></div>
-                <div class="data-row"><span>Companies</span><strong>Specialized operators and regulated participants</strong></div>
-                <div class="data-row"><span>Token layer</span><strong>Special RWA representation</strong></div>
-              </div>
-              <div class="mt-5 rounded-2xl border border-field/20 bg-field/[.08] p-4">
-                <p class="font-mono text-xs uppercase tracking-[.16em] text-field">Investor signal</p>
-                <p class="mt-2 text-sm leading-6 text-white/75">The tokenization market is moving toward institutional products that can explain the asset, the legal wrapper, the collateral, the risk process, and the reporting stack.</p>
-              </div>
-            </div>
-          </div>
+      <section id="como-funciona" class="section light-section">
+        <div class="section-heading">
+          <p class="eyebrow">Como funciona</p>
+          <h2>O caminho é simples: comprar, contratar, acompanhar.</h2>
+          <p>
+            O produto principal não é o token. O produto é o acesso organizado a
+            ativos rurais e serviços de cuidado.
+          </p>
         </div>
-      </div>
-    </section>
+        <div class="steps-grid">
+          <article>
+            <span>01</span>
+            <h3>Escolha um ativo rural</h3>
+            <p>
+              Pode ser grão, vaca leiteira ou outro ativo disponível no
+              marketplace.
+            </p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Contrate o serviço</h3>
+            <p>
+              Cooperativas cuidam das operações com grãos. Tutores de vacas
+              cuidam da rotina do gado de leite.
+            </p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Acompanhe tudo</h3>
+            <p>
+              A plataforma mostra documentos, registros, custos e eventos
+              importantes em linguagem clara.
+            </p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Venda quando fizer sentido</h3>
+            <p>
+              A venda depende de mercado, prazos, regras operacionais, custos e
+              disponibilidade de compradores.
+            </p>
+          </article>
+        </div>
+      </section>
 
-    <section id="rwa" class="border-y border-white/10 bg-white text-ink">
-      <div class="mx-auto max-w-7xl px-5 py-24 lg:px-8">
-        <div class="grid gap-10 lg:grid-cols-[.85fr_1.15fr] lg:items-start">
-          <div>
-            <p class="eyebrow-dark">Updated business model</p>
-            <h2 class="mt-4 text-4xl font-semibold leading-tight tracking-[-.055em] sm:text-6xl">Institutions do not buy hype. They buy risk-adjusted exposure.</h2>
-            <p class="mt-6 text-lg leading-8 text-slate-700">The new tokenization material reinforces the direction: real institutional capital wants fixed-income-like products, real assets, infrastructure, compliance, and clear risk management.</p>
-          </div>
-          <div class="grid gap-4 sm:grid-cols-2">
-            <article class="light-card"><span class="card-index">01</span><h3>Real-World Asset, literally</h3><p>The asset base starts with concrete cattle operations: identified animals, farm records, sanitary documents, invoices, movement controls, and recurring verification.</p></article>
-            <article class="light-card"><span class="card-index">02</span><h3>Special token, not utility hype</h3><p>The token is positioned as a special RWA instrument tied to an enforceable financial structure, permissioned holders, and controlled settlement.</p></article>
-            <article class="light-card"><span class="card-index">03</span><h3>Institutional risk language</h3><p>The site now leads with collateral, risk review, legal rails, operator controls, and reporting instead of generic blockchain benefits.</p></article>
-            <article class="light-card"><span class="card-index">04</span><h3>Fitch risk-analysis layer</h3><p>The partnership narrative highlights Fitch's role analyzing the risk of the operation, strengthening investor diligence and institutional credibility.</p></article>
-          </div>
+      <section id="graos" class="section split-section">
+        <figure class="section-image">
+          <img
+            src="/assets/images/grain-cooperative.jpg"
+            width="1456"
+            height="1088"
+            alt="Profissionais manuseando grãos em uma cooperativa rural"
+          />
+        </figure>
+        <div class="explain-block">
+          <p class="eyebrow">Operações com grãos</p>
+          <h2>Cooperativas ajudam a comprar, armazenar e vender.</h2>
+          <p>
+            Para grãos, a cooperativa é a prestadora de serviço rural. Ela pode
+            apoiar a compra, armazenagem e venda conforme a regra operacional
+            contratada.
+          </p>
+          <ul>
+            <li>Taxa pela compra do grão.</li>
+            <li>Taxa pela armazenagem.</li>
+            <li>Taxa pela venda, quando a operação acontecer.</li>
+            <li>Consulta de preço com fonte e data informadas.</li>
+          </ul>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="fitch" class="relative overflow-hidden bg-[#07110d]">
-      <div class="mx-auto max-w-7xl px-5 py-24 lg:px-8">
-        <div class="grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-center">
-          <div>
-            <p class="eyebrow-light">Fitch partnership</p>
-            <h2 class="mt-4 text-4xl font-semibold leading-tight tracking-[-.055em] text-white sm:text-6xl">Risk analysis designed for institutional capital.</h2>
-            <p class="mt-6 text-lg leading-8 text-white/65">Livestock Rent is emphasizing its Fitch partnership and the risk-analysis process around the operation. That matters because Web3 VCs and institutional buyers need more than an asset story. They need independent risk language, comparable diligence, and a structure that can be explained inside investment committees.</p>
-          </div>
-          <div class="rounded-[2rem] border border-field/20 bg-field/[.08] p-6 shadow-lift">
-            <p class="font-mono text-xs uppercase tracking-[.2em] text-field">Risk review map</p>
-            <div class="mt-6 grid gap-3">
-              <div class="data-row"><span>Asset risk</span><strong>Animal existence, health, valuation, mortality</strong></div>
-              <div class="data-row"><span>Operator risk</span><strong>Farm performance, fraud, custody, records</strong></div>
-              <div class="data-row"><span>Legal risk</span><strong>CPR, CRA, B3, CVM, enforceability</strong></div>
-              <div class="data-row"><span>Settlement risk</span><strong>BRL-to-USDC, custody, wallet controls</strong></div>
-            </div>
-          </div>
+      <section id="leite" class="section media-section">
+        <div class="section-copy">
+          <p class="eyebrow">Gado de leite</p>
+          <h2>O tutor de vaca cuida do animal. A cliente acompanha.</h2>
+          <p>
+            O cuidado no campo precisa ser explicado sem romantizar. Existe
+            manejo, alimentação, bem-estar, custos e risco rural.
+          </p>
         </div>
-      </div>
-    </section>
+        <figure class="section-image">
+          <img
+            src="/assets/images/dairy-care.jpg"
+            width="1456"
+            height="1088"
+            alt="Tutor cuidando de vacas leiteiras em uma fazenda"
+          />
+        </figure>
+        <div class="milk-grid">
+          <article>
+            <h3>O que a cliente compra</h3>
+            <p>
+              Uma vaca leiteira ou outro ativo pecuário disponível, conforme as
+              regras do marketplace.
+            </p>
+          </article>
+          <article>
+            <h3>O que o tutor faz</h3>
+            <p>
+              Cuida da alimentação, rotina, bem-estar, registros e manejo
+              operacional definido no contrato.
+            </p>
+          </article>
+          <article>
+            <h3>O que a plataforma mostra</h3>
+            <p>
+              Eventos do ciclo de vida, documentos, fotos, custos, alertas e
+              dados importantes para acompanhamento.
+            </p>
+          </article>
+        </div>
+      </section>
 
-    <section id="guarantees" class="bg-[#f4f7ec] text-ink">
-      <div class="mx-auto max-w-7xl px-5 py-24 lg:px-8">
-        <div class="max-w-3xl">
-          <p class="eyebrow-dark">Protection layers</p>
-          <h2 class="mt-4 text-4xl font-semibold leading-tight tracking-[-.055em] sm:text-6xl">Many guarantees around one concrete asset class.</h2>
-          <p class="mt-6 text-lg leading-8 text-slate-700">The project is presented as a real RWA because the structure is designed around assets that can be identified, documented, controlled, legally wrapped, and analyzed.</p>
+      <section id="tecnologia" class="section dark-section">
+        <div class="section-heading">
+          <p class="eyebrow">Tecnologia como apoio</p>
+          <h2>Blockchain é livro de registros, não promessa de ganho.</h2>
+          <p>
+            A tecnologia ajuda a organizar evidências e acompanhar eventos.
+            Documentos sensíveis ficam protegidos fora da blockchain, com
+            referências e registros digitais quando necessário.
+          </p>
         </div>
-        <div class="mt-12 grid gap-4 lg:grid-cols-3">
-          <article class="timeline-card featured"><span>Concrete asset</span><h3>Cattle are physical, identifiable and auditable</h3><p>Each admitted animal can be connected to SISBOV identity, physical tags, invoices, GTA movement documents, veterinary records and independent attestations.</p></article>
-          <article class="timeline-card"><span>Legal support</span><h3>Brazilian instruments support enforceability</h3><p>The intended structure uses CPR receivables, B3 registration, CRA securitization architecture, investor records and regulated counterparties.</p></article>
-          <article class="timeline-card"><span>Risk analysis</span><h3>Companies plus Fitch add discipline</h3><p>Specialized companies operate and service the structure while Fitch analyzes the risk profile of the operation for an institutional investor audience.</p></article>
+        <div class="tech-strip">
+          <span>NFT do animal</span>
+          <span>Referências digitais</span>
+          <span>Eventos do ativo</span>
+          <span>Histórico de cuidado</span>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="architecture" class="bg-white text-ink">
-      <div class="mx-auto max-w-7xl px-5 py-24 lg:px-8">
-        <div class="mx-auto max-w-3xl text-center">
-          <p class="eyebrow-dark">Architecture</p>
-          <h2 class="mt-4 text-4xl font-semibold leading-tight tracking-[-.055em] sm:text-6xl">A special token connected to the real economy.</h2>
-          <p class="mt-6 text-lg leading-8 text-slate-700">The token layer should mirror the legally controlling structure. The real value comes from cattle operations, receivables, legal documentation, professional servicing, risk analysis, and auditable settlement.</p>
+      <section id="custos" class="section light-section compact-section">
+        <div class="notice">
+          <p class="eyebrow">Custos e riscos</p>
+          <h2>O campo é real. Por isso, custos e riscos também são.</h2>
+          <p>
+            Não prometemos retorno, lucro ou renda. Preços podem mudar, custos
+            podem variar, animais precisam de cuidado e grãos dependem de
+            mercado, armazenagem e logística. Nosso papel é organizar a
+            experiência para a cliente entender melhor cada etapa.
+          </p>
         </div>
-        <div class="mt-14 grid gap-3 sm:grid-cols-2 lg:grid-cols-4 lg:items-stretch">
-          <div class="flow-card light-flow"><small>01</small><strong>Livestock operations</strong><span>Concrete cattle assets under qualified farm operators.</span></div>
-          <div class="flow-card light-flow"><small>02</small><strong>Evidence and controls</strong><span>SISBOV, GTA, invoices, veterinary records and attestations.</span></div>
-          <div class="flow-card light-flow"><small>03</small><strong>Legal wrapper</strong><span>CPR and CRA rails with B3 and regulated participants.</span></div>
-          <div class="flow-card light-flow"><small>04</small><strong>Special RWA token</strong><span>Permissioned representation with USDC settlement where allowed.</span></div>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="bg-[#07110d] text-white">
-      <div class="mx-auto max-w-7xl px-5 py-24 lg:px-8">
-        <div class="grid gap-10 lg:grid-cols-[.9fr_1.1fr]">
-          <div>
-            <p class="eyebrow-light">Investor narrative</p>
-            <h2 class="mt-4 text-4xl font-semibold leading-tight tracking-[-.055em] sm:text-6xl">A concrete RWA for investors who need evidence before exposure.</h2>
-          </div>
-          <div class="space-y-4">
-            <div class="quote-card">“A special Real-World Asset token for livestock cash flows, supported by concrete assets, legal structure, professional operators, and Fitch risk analysis.”</div>
-            <div class="grid gap-4 sm:grid-cols-2">
-              <div class="dark-panel"><p class="panel-label">For Web3 VCs</p><h3>RWA with substance</h3><p>The narrative shifts from token novelty to origination, servicing, collateral evidence, compliance infrastructure, and institutional distribution.</p></div>
-              <div class="dark-panel"><p class="panel-label">For institutions</p><h3>Risk process first</h3><p>The structure speaks the language of asset backing, legal enforceability, independent analysis, reporting discipline, and controlled settlement.</p></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="bg-field text-ink">
-      <div class="mx-auto grid max-w-7xl gap-8 px-5 py-20 lg:grid-cols-[1fr_auto] lg:items-center lg:px-8">
+      <section id="lista" class="cta-section">
         <div>
-          <p class="font-mono text-xs font-semibold uppercase tracking-[.2em] text-ink/55">Private investor materials</p>
-          <h2 class="mt-3 text-4xl font-black tracking-[-.055em] sm:text-6xl">Request the RWA diligence brief.</h2>
-          <p class="mt-5 max-w-2xl text-lg leading-8 text-ink/70">Livestock Rent is structuring a special RWA token around concrete livestock assets, legal protections, professional operators, and Fitch risk-analysis workstreams.</p>
+          <p class="eyebrow">Primeira comunidade</p>
+          <h2>Entre na lista de novos produtores rurais urbanos.</h2>
+          <p>
+            Receba novidades quando o marketplace abrir novos ativos e serviços.
+          </p>
         </div>
-        <a class="inline-flex items-center justify-center rounded-full bg-ink px-7 py-4 text-sm font-black text-white transition hover:bg-pine" href="mailto:investors@livestocktoken.farm?subject=Livestock%20Rent%20RWA%20investor%20brief">Contact the team</a>
-      </div>
-    </section>
-  </main>
+        <a
+          href="mailto:hello@livestocktoken.farm?subject=Quero%20entrar%20na%20lista%20LivestockTokens.Farm"
+          class="button-primary dark-button"
+        >
+          Entrar na lista <span>↗</span>
+        </a>
+      </section>
+    </main>
 
-  <footer class="bg-ink px-5 py-10 text-sm text-white/50 lg:px-8">
-    <div class="mx-auto flex max-w-7xl flex-col gap-4 border-t border-white/10 pt-8 md:flex-row md:items-center md:justify-between">
-      <p>© <span id="year"></span> Livestock Rent. Structuring a special livestock RWA token.</p>
-      <p class="max-w-3xl">This website is not legal, tax, accounting, veterinary, regulatory, or investment advice. It is not an offer to sell securities or a promise of guaranteed returns.</p>
-    </div>
-  </footer>
+    <footer class="site-footer">
+      <p>© <span id="year"></span> LivestockTokens.Farm.</p>
+      <p>
+        Marketplace de ativos e serviços rurais. Não prometemos retorno, lucro,
+        renda ou venda futura.
+      </p>
+    </footer>
 
-  <script src="/assets/app.js" defer></script>
-</body>
+    <script src="/assets/app.js" defer></script>
+  </body>
 </html>
