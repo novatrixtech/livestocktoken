@@ -19,7 +19,5 @@
   <text x="110" y="420" fill="#dce7c8" font-family="DM Sans, Avenir Next, system-ui, sans-serif" font-size="27" font-weight="650">
     serviços de cuidado, armazenagem e operação.
   </text>
-  <rect x="873" y="95" width="180" height="180" rx="42" fill="#fff8e7"/>
-  <path d="M902 224c38-45 87-68 146-70v75H902z" fill="#8cc63f"/>
-  <path d="M924 244c34-34 75-52 124-58" fill="none" stroke="#12382a" stroke-width="10" stroke-linecap="round"/>
+  <image href="../brand/logo-mark.png" x="870" y="82" width="196" height="196" preserveAspectRatio="xMidYMid meet"/>
 </svg>

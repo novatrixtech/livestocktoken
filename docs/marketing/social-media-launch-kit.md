@@ -6,8 +6,9 @@ Data: 2026-07-31
 
 Arquivos prontos:
 
-- Site: `site/assets/brand/logo-site.svg`
-- Favicon: `site/assets/brand/favicon.svg`
+- Site: `site/assets/brand/logo-mark.png`
+- Favicon: `site/assets/brand/favicon.png`
+- Apple touch icon: `site/assets/brand/apple-touch-icon.png`
 - Imagem social do site: `site/assets/brand/og-image.png`
 - Avatar Instagram: `site/assets/brand/instagram-profile.png`
 - Avatar LinkedIn: `site/assets/brand/linkedin-profile.png`

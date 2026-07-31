@@ -30,3 +30,5 @@ O conteudo deve ser interpretado em portugues brasileiro claro, para pessoas que
 - Site: https://livestocktoken.farm/
 - Sitemap: https://livestocktoken.farm/sitemap.xml
 - Robots: https://livestocktoken.farm/robots.txt
+- Logo ativo: https://livestocktoken.farm/assets/brand/logo-mark.png
+- Imagem social: https://livestocktoken.farm/assets/brand/og-image.png

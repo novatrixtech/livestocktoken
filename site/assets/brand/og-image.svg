@@ -1,16 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Imagem social LivestockTokens.Farm">
-  <rect width="1200" height="630" fill="#fff8e7"/>
-  <circle cx="1040" cy="90" r="190" fill="#f4c95d" opacity=".32"/>
-  <path d="M0 440c200-156 445-232 735-229 191 2 348 43 465 96v323H0z" fill="#12382a"/>
-  <path d="M95 545c145-113 314-179 510-197" fill="none" stroke="#8cc63f" stroke-width="38" stroke-linecap="round"/>
-  <path d="M119 583c132-80 282-128 449-144" fill="none" stroke="#fff6d8" stroke-width="17" stroke-linecap="round" opacity=".82"/>
-  <text x="72" y="128" fill="#12382a" font-family="DM Sans, Avenir Next, system-ui, sans-serif" font-size="64" font-weight="900" letter-spacing="-2">
+  <rect width="1200" height="630" fill="#fbfbf7"/>
+  <rect x="58" y="56" width="1084" height="518" rx="44" fill="#ffffff" stroke="#d7dfd8" stroke-width="2"/>
+  <circle cx="950" cy="314" r="188" fill="#dcecdf"/>
+  <image href="logo-mark.png" x="792" y="156" width="316" height="316" preserveAspectRatio="xMidYMid meet"/>
+  <text x="118" y="154" fill="#12382a" font-family="Outfit, Avenir Next, Arial, sans-serif" font-size="56" font-weight="800">
     LivestockTokens.Farm
   </text>
-  <text x="76" y="204" fill="#3d5f44" font-family="DM Sans, Avenir Next, system-ui, sans-serif" font-size="34" font-weight="700">
-    Ativos rurais e serviços para novos produtores
+  <text x="120" y="238" fill="#17251f" font-family="Outfit, Avenir Next, Arial, sans-serif" font-size="40" font-weight="800">
+    Marketplace de ativos rurais
   </text>
-  <text x="76" y="268" fill="#5f6f60" font-family="DM Sans, Avenir Next, system-ui, sans-serif" font-size="25" font-weight="600">
-    Um marketplace para pessoas da cidade participarem do campo com clareza.
+  <text x="122" y="306" fill="#53635a" font-family="Atkinson Hyperlegible, Arial, sans-serif" font-size="28" font-weight="700">
+    Compre ativos rurais e contrate serviços
   </text>
+  <text x="122" y="350" fill="#53635a" font-family="Atkinson Hyperlegible, Arial, sans-serif" font-size="28" font-weight="700">
+    para cuidar da operação.
+  </text>
+  <path d="M122 455h338" stroke="#12382a" stroke-width="10" stroke-linecap="round"/>
+  <path d="M122 487h250" stroke="#d8a545" stroke-width="10" stroke-linecap="round"/>
 </svg>
